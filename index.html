@@ -269,43 +269,127 @@
       font-weight: 600;
     }
 
-    /* Certificates Grid */
+    /* Premium Black & Gold Certificate Cards */
     .cert-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.8rem;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 1.5rem;
       margin-bottom: 6.5rem;
     }
 
     .cert-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border-color);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(145deg, #17140d 0%, #0b0b0b 55%, #050505 100%);
+      border: 1px solid rgba(212, 175, 55, 0.72);
       border-radius: 18px;
+      padding: 1.55rem;
       overflow: hidden;
-      transition: all 0.3s;
+      box-shadow: inset 0 1px 0 rgba(255, 225, 130, 0.08), 0 12px 30px rgba(0, 0, 0, 0.28);
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .cert-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 12%;
+      right: 12%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #f7d977, #b8860b, transparent);
     }
 
     .cert-card:hover {
-      transform: translateY(-6px);
-      border-color: var(--accent-purple);
-      box-shadow: 0 15px 30px rgba(129, 140, 248, 0.15);
+      transform: translateY(-5px);
+      border-color: #f5d675;
+      box-shadow: inset 0 1px 0 rgba(255, 225, 130, 0.12), 0 18px 38px rgba(212, 175, 55, 0.12);
     }
 
-    .cert-img-wrapper {
-      position: relative;
-      padding-bottom: 75%; /* 4:3 landscape ratio */
-      height: 0;
-      overflow: hidden;
-      background: #000;
+    .cert-card-top {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      margin-bottom: 1rem;
     }
 
-    .cert-img-wrapper iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
+    .cert-icon {
+      flex: 0 0 46px;
+      width: 46px;
+      height: 46px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(212, 175, 55, 0.72);
+      border-radius: 13px;
+      background: rgba(212, 175, 55, 0.08);
+      color: #f3cf66;
+      font-size: 1.2rem;
+    }
+
+    .cert-issuer {
+      color: #e2bf58;
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .cert-type {
+      color: #9ca3af;
+      font-size: 0.75rem;
+      margin-top: 0.15rem;
+    }
+
+    .cert-card h3 {
+      color: #fff8df;
+      font-size: 1.18rem;
+      line-height: 1.4;
+      font-weight: 800;
+      margin-bottom: 0.75rem;
+    }
+
+    .cert-card .cert-description {
+      color: #c3c0b6;
+      font-size: 0.88rem;
+      line-height: 1.75;
+      margin-bottom: 1rem;
+    }
+
+    .cert-focus {
+      color: #d8d1bd;
+      font-size: 0.78rem;
+      line-height: 1.65;
+      margin-bottom: 1.25rem;
+    }
+
+    .cert-focus strong {
+      color: #e6c65e;
+      font-weight: 700;
+    }
+
+    .cert-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.55rem;
       width: 100%;
-      height: 100%;
-      border: 0;
+      margin-top: auto;
+      padding: 0.75rem 0.9rem;
+      border: 1px solid rgba(212, 175, 55, 0.82);
+      border-radius: 10px;
+      background: linear-gradient(135deg, #f4d675 0%, #bd9228 100%);
+      color: #11100b;
+      text-decoration: none;
+      text-align: center;
+      font-size: 0.84rem;
+      font-weight: 800;
+      transition: filter 0.25s ease, transform 0.25s ease;
+    }
+
+    .cert-link:hover {
+      filter: brightness(1.08);
+      transform: translateY(-1px);
     }
 
     /* Platforms Grid */
@@ -526,63 +610,69 @@
       </div>
     </section>
 
-    <!-- Certifications Section (5 Certificates) -->
+    <!-- Certifications Section: Original Semrush Certificate PDFs -->
     <section id="certs">
       <h2 class="section-title">
-        <i class="fa-solid fa-award"></i> 
+        <i class="fa-solid fa-award"></i>
         <span data-en="Certifications & Training" data-no="Sertifiseringer og opplæring">Certifications & Training</span>
       </h2>
       <div class="cert-grid">
 
-        <div class="cert-card">
-          <div class="cert-img-wrapper">
-            <iframe src="https://drive.google.com/file/d/1X3v_X2bUj8XkXzP4-yZ6d-J8XkXzP4-yZ/preview"></iframe>
+        <article class="cert-card">
+          <div class="cert-card-top">
+            <div class="cert-icon"><i class="fa-solid fa-file-circle-check"></i></div>
+            <div>
+              <div class="cert-issuer">Semrush Academy</div>
+              <div class="cert-type">SEO Certification</div>
+            </div>
           </div>
-          <div class="card-info">
-            <h3>Off-Page SEO Certification</h3>
-            <p>SEMrush Academy</p>
-          </div>
-        </div>
+          <h3>On-Page SEO</h3>
+          <p class="cert-description">Focuses on improving individual pages so search engines and visitors can understand their purpose and value. Key areas include search intent, content structure, title tags, meta descriptions, headings, and internal linking.</p>
+          <p class="cert-focus"><strong>Core focus:</strong> Content optimization · Page relevance · On-page elements</p>
+          <a class="cert-link" href="https://static.semrush.com/academy/certificates/c81d2acca6/muhammad-jalal-din_25.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Original Certificate PDF</a>
+        </article>
 
-        <div class="cert-card">
-          <div class="cert-img-wrapper">
-            <iframe src="https://drive.google.com/file/d/1Y3v_X2bUj8XkXzP4-yZ6d-J8XkXzP4-yZ/preview"></iframe>
+        <article class="cert-card">
+          <div class="cert-card-top">
+            <div class="cert-icon"><i class="fa-solid fa-link"></i></div>
+            <div>
+              <div class="cert-issuer">Semrush Academy</div>
+              <div class="cert-type">SEO Certification</div>
+            </div>
           </div>
-          <div class="card-info">
-            <h3>On-Page & Technical SEO</h3>
-            <p>SEMrush Academy</p>
-          </div>
-        </div>
+          <h3>Off-Page SEO</h3>
+          <p class="cert-description">Covers activities that build a website’s reputation and authority beyond its own pages, including backlink analysis, competitor link research, digital PR opportunities, and sustainable, white-hat link-building practices.</p>
+          <p class="cert-focus"><strong>Core focus:</strong> Backlink analysis · Link building · Website authority</p>
+          <a class="cert-link" href="https://static.semrush.com/academy/certificates/4f1d545f31/muhammad-jalal-din_25.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Original Certificate PDF</a>
+        </article>
 
-        <div class="cert-card">
-          <div class="cert-img-wrapper">
-            <iframe src="https://drive.google.com/file/d/1Z3v_X2bUj8XkXzP4-yZ6d-J8XkXzP4-yZ/preview"></iframe>
+        <article class="cert-card">
+          <div class="cert-card-top">
+            <div class="cert-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div>
+              <div class="cert-issuer">Semrush Academy</div>
+              <div class="cert-type">SEO Certification</div>
+            </div>
           </div>
-          <div class="card-info">
-            <h3>Local SEO Optimization</h3>
-            <p>SEMrush Academy</p>
-          </div>
-        </div>
+          <h3>Local SEO</h3>
+          <p class="cert-description">Focuses on helping businesses reach customers in relevant local searches. Important areas include local keyword targeting, business profile optimization, consistent business information, reviews, citations, and local visibility.</p>
+          <p class="cert-focus"><strong>Core focus:</strong> Local search · Business profiles · Map visibility</p>
+          <a class="cert-link" href="https://static.semrush.com/academy/certificates/1843394581/muhammad-jalal-din_25.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Original Certificate PDF</a>
+        </article>
 
-        <div class="cert-card">
-          <div class="cert-img-wrapper">
-            <iframe src="https://drive.google.com/file/d/16oX9BCgGA8WUJOdJa1ibJEn7f4oHlfbL/preview"></iframe>
+        <article class="cert-card">
+          <div class="cert-card-top">
+            <div class="cert-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+            <div>
+              <div class="cert-issuer">Semrush Academy</div>
+              <div class="cert-type">Keyword Research</div>
+            </div>
           </div>
-          <div class="card-info">
-            <h3>Link Building Specialist</h3>
-            <p>Verified Certification</p>
-          </div>
-        </div>
-
-        <div class="cert-card">
-          <div class="cert-img-wrapper">
-            <iframe src="https://drive.google.com/file/d/1UM2vUBjoyk_IFZ7dzdHTiuthRTLOz3iG/preview"></iframe>
-          </div>
-          <div class="card-info">
-            <h3 data-en="SEO & Guest Blogging Training" data-no="SEO og gjesteblogging trening">SEO & Guest Blogging Training</h3>
-            <p>Nextage Solution (Private Institute)</p>
-          </div>
-        </div>
+          <h3>Keyword Research with AI</h3>
+          <p class="cert-description">Combines keyword discovery with AI-assisted idea generation to explore search intent, find relevant topic opportunities, compare competitor coverage, and organize keyword ideas around useful content plans.</p>
+          <p class="cert-focus"><strong>Core focus:</strong> Keyword discovery · Search intent · AI-assisted research</p>
+          <a class="cert-link" href="https://static.semrush.com/academy/certificates/c3155321e7/muhammad-jalal-din_25.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Original Certificate PDF</a>
+        </article>
 
       </div>
     </section>
