@@ -122,18 +122,95 @@
 
     .profile-img-container {
       position: relative;
-      border-radius: 24px;
+      border-radius: 26px;
       overflow: hidden;
-      border: 1px solid var(--border-color);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
-      background: #000;
+      border: 1px solid rgba(226, 191, 88, 0.9);
+      padding: 8px;
+      background:
+        linear-gradient(145deg, rgba(247, 217, 119, 0.16), transparent 26%),
+        linear-gradient(145deg, #2b2412 0%, #090909 48%, #17140d 100%);
+      box-shadow:
+        0 0 0 1px rgba(212, 175, 55, 0.12),
+        0 18px 38px rgba(0, 0, 0, 0.58),
+        0 0 34px rgba(212, 175, 55, 0.13);
     }
 
     .profile-img-container iframe {
+      position: relative;
+      z-index: 1;
       width: 100%;
-      height: 460px;
+      height: 430px;
       border: none;
+      border-radius: 17px;
       display: block;
+      background: #050505;
+    }
+
+    .profile-img-container::before,
+    .profile-img-container::after {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      width: 38px;
+      height: 38px;
+      pointer-events: none;
+      border-color: #f0d477;
+      border-style: solid;
+      filter: drop-shadow(0 0 5px rgba(226, 191, 88, 0.4));
+    }
+
+    .profile-img-container::before {
+      top: 12px;
+      left: 12px;
+      border-width: 2px 0 0 2px;
+      border-top-left-radius: 6px;
+    }
+
+    .profile-img-container::after {
+      bottom: 58px;
+      right: 12px;
+      border-width: 0 2px 2px 0;
+      border-bottom-right-radius: 6px;
+    }
+
+    .profile-image-caption {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.65rem;
+      padding: 0.85rem 0.45rem 0.2rem;
+      color: #e2bf58;
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      line-height: 1.5;
+    }
+
+    .profile-image-caption .caption-detail {
+      color: #bdb4a0;
+      font-size: 0.65rem;
+      letter-spacing: 0.7px;
+      text-align: right;
+      font-weight: 700;
+    }
+
+    .video-open-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      margin-top: 0.75rem;
+      color: #e2bf58;
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(226, 191, 88, 0.38);
+      padding-bottom: 0.2rem;
+    }
+
+    .video-open-link:hover {
+      color: #fff1bd;
+      border-bottom-color: #e2bf58;
     }
 
     .hero-text h1 {
@@ -844,6 +921,18 @@
       .platform-page strong { font-size: 0.9rem; }
     }
 
+    @media (max-width: 600px) {
+      .profile-image-caption {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.2rem;
+        font-size: 0.67rem;
+      }
+      .profile-image-caption .caption-detail {
+        text-align: left;
+      }
+    }
+
     /* Footer */
     footer {
       border-top: 1px solid var(--border-color);
@@ -883,7 +972,11 @@
     <!-- Hero / Profile Section -->
     <section class="hero" id="home">
       <div class="profile-img-container">
-        <iframe src="https://drive.google.com/file/d/12J8YXdrJmK1oJZZNjwIYX6SmLsZOVgQs/preview" allow="autoplay"></iframe>
+        <iframe src="https://drive.google.com/file/d/12J8YXdrJmK1oJZZNjwIYX6SmLsZOVgQs/preview" title="Muhammad Jalal Din portfolio profile" allow="autoplay" loading="lazy"></iframe>
+        <div class="profile-image-caption">
+          <span><i class="fa-solid fa-star"></i> Muhammad Jalal Din</span>
+          <span class="caption-detail">SEO · Outreach · UGC</span>
+        </div>
       </div>
       <div class="hero-text">
         <h1>Muhammad Jalal Din</h1>
@@ -924,21 +1017,23 @@
 
         <div class="video-card">
           <div class="video-wrapper">
-            <iframe src="https://drive.google.com/file/d/1k-2P2bUj8XkXzP4-yZ6d-J8XkXzP4-yZ/preview" allow="autoplay"></iframe>
+            <iframe src="https://drive.google.com/file/d/1k-2P2bUj8XkXzP4-yZ6d-J8XkXzP4-yZ/preview" title="Brand Showcase Video 1" allow="autoplay; encrypted-media; picture-in-picture" loading="lazy"></iframe>
           </div>
           <div class="card-info">
             <h3 data-en="Brand Showcase Video 1" data-no="Merkevarevideo 1">Brand Showcase Video 1</h3>
             <p>JordanMaison.Official</p>
+            <a class="video-open-link" href="https://drive.google.com/file/d/1k-2P2bUj8XkXzP4-yZ6d-J8XkXzP4-yZ/view?usp=sharing" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open directly in Google Drive</a>
           </div>
         </div>
 
         <div class="video-card">
           <div class="video-wrapper">
-            <iframe src="https://drive.google.com/file/d/1_a3X2bUj8XkXzP4-yZ6d-J8XkXzP4-yZ/preview" allow="autoplay"></iframe>
+            <iframe src="https://drive.google.com/file/d/1_a3X2bUj8XkXzP4-yZ6d-J8XkXzP4-yZ/preview" title="Product Review UGC 2" allow="autoplay; encrypted-media; picture-in-picture" loading="lazy"></iframe>
           </div>
           <div class="card-info">
             <h3 data-en="Product Review UGC 2" data-no="Produktanmeldelse UGC 2">Product Review UGC 2</h3>
             <p>JordanMaison.Official</p>
+            <a class="video-open-link" href="https://drive.google.com/file/d/1_a3X2bUj8XkXzP4-yZ6d-J8XkXzP4-yZ/view?usp=sharing" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open directly in Google Drive</a>
           </div>
         </div>
 
