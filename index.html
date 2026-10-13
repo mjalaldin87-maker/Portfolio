@@ -392,16 +392,191 @@
       transform: translateY(-1px);
     }
 
-    /* Premium Black & Gold Work-With-Me Panel */
+    /* Work Samples: featured website */
+    .section-intro {
+      color: var(--text-muted);
+      max-width: 860px;
+      margin: -1.4rem 0 1.8rem;
+      line-height: 1.75;
+    }
+
+    .website-sample-card {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 1.3rem;
+      padding: 1.5rem;
+      margin: 0 0 2rem;
+      border: 1px solid rgba(212, 175, 55, 0.72);
+      border-radius: 18px;
+      background: linear-gradient(145deg, #17140d 0%, #0b0b0b 58%, #050505 100%);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    .website-sample-icon {
+      width: 58px;
+      height: 58px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(212, 175, 55, 0.75);
+      border-radius: 15px;
+      color: #f3cf66;
+      background: rgba(212, 175, 55, 0.08);
+      font-size: 1.5rem;
+    }
+
+    .website-sample-copy .work-kicker {
+      margin: 0 0 0.3rem;
+    }
+
+    .website-sample-copy h3 {
+      color: #fff8df;
+      font-size: 1.18rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .website-sample-copy p {
+      color: #c3c0b6;
+      font-size: 0.86rem;
+      line-height: 1.7;
+    }
+
+    .website-sample-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      padding: 0.75rem 1rem;
+      border: 1px solid rgba(212, 175, 55, 0.82);
+      border-radius: 10px;
+      background: linear-gradient(135deg, #f4d675 0%, #bd9228 100%);
+      color: #11100b;
+      text-decoration: none;
+      text-align: center;
+      font-weight: 800;
+      font-size: 0.84rem;
+      white-space: nowrap;
+    }
+
+    /* Services */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+      gap: 1.2rem;
+      margin-bottom: 5rem;
+    }
+
+    .service-card {
+      padding: 1.5rem;
+      background: var(--card-bg);
+      border: 1px solid rgba(212, 175, 55, 0.44);
+      border-radius: 17px;
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      border-color: #e2bf58;
+      box-shadow: 0 14px 30px rgba(212, 175, 55, 0.09);
+    }
+
+    .service-card i {
+      color: #e2bf58;
+      font-size: 1.45rem;
+      margin-bottom: 0.85rem;
+    }
+
+    .service-card h3 {
+      color: #fff2c7;
+      font-size: 1.08rem;
+      line-height: 1.4;
+      margin-bottom: 0.55rem;
+    }
+
+    .service-card p {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      line-height: 1.75;
+    }
+
+    .services-cta {
+      display: inline-flex;
+      margin-top: 1.3rem;
+    }
+
+    /* About */
+    .about-detail {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: stretch;
+      gap: 1.4rem;
+      margin-bottom: 5rem;
+    }
+
+    .about-copy,
+    .about-highlights {
+      padding: 1.7rem;
+      border: 1px solid var(--border-color);
+      border-radius: 18px;
+      background: var(--card-bg);
+    }
+
+    .about-copy h3,
+    .about-highlights h3 {
+      color: #fff2c7;
+      font-size: 1.15rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .about-copy p {
+      color: #c4c4ca;
+      font-size: 0.92rem;
+      line-height: 1.85;
+      margin-bottom: 0.8rem;
+    }
+
+    .about-highlights ul {
+      list-style: none;
+      display: grid;
+      gap: 0.8rem;
+    }
+
+    .about-highlights li {
+      display: flex;
+      gap: 0.65rem;
+      color: #c4c4ca;
+      font-size: 0.88rem;
+      line-height: 1.65;
+    }
+
+    .about-highlights li i {
+      color: #e2bf58;
+      margin-top: 0.25rem;
+    }
+
+    .about-cert-link {
+      display: inline-flex;
+      gap: 0.55rem;
+      align-items: center;
+      color: #e2bf58;
+      text-decoration: none;
+      font-weight: 800;
+      margin-top: 1.15rem;
+    }
+
+    .about-cert-link:hover {
+      color: #fff1bd;
+    }
+
+    /* Contact & platform book */
     .platforms-grid {
       display: block;
-      margin-bottom: 6.5rem;
+      margin-bottom: 5.5rem;
     }
 
     .work-with-me-card {
       position: relative;
       overflow: hidden;
-      padding: clamp(1.5rem, 4vw, 3rem);
+      padding: clamp(1.15rem, 3vw, 2.4rem);
       border: 1px solid rgba(212, 175, 55, 0.76);
       border-radius: 22px;
       background:
@@ -420,6 +595,83 @@
       background: linear-gradient(90deg, transparent, #f7d977, #b8860b, transparent);
     }
 
+    .contact-layout {
+      display: grid;
+      grid-template-columns: minmax(220px, 0.75fr) minmax(0, 1.5fr);
+      gap: clamp(1.4rem, 3vw, 2.6rem);
+      align-items: start;
+    }
+
+    .contact-profile {
+      position: relative;
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.025);
+      border: 1px solid rgba(212, 175, 55, 0.45);
+      border-radius: 17px;
+    }
+
+    .contact-photo-frame {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #090909;
+      border: 1px solid rgba(212, 175, 55, 0.5);
+      margin-bottom: 1rem;
+    }
+
+    .contact-photo-frame iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .contact-profile h3 {
+      color: #fff2c7;
+      font-size: 1.2rem;
+      line-height: 1.4;
+      margin-bottom: 0.35rem;
+    }
+
+    .contact-profile .profile-role {
+      color: #e2bf58;
+      font-size: 0.82rem;
+      font-weight: 700;
+      line-height: 1.6;
+      margin-bottom: 0.75rem;
+    }
+
+    .contact-profile p {
+      color: #c3c0b6;
+      font-size: 0.84rem;
+      line-height: 1.75;
+      margin-bottom: 1rem;
+    }
+
+    .contact-email {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem;
+      border: 1px solid rgba(212, 175, 55, 0.72);
+      border-radius: 10px;
+      color: #11100b;
+      background: linear-gradient(135deg, #f4d675 0%, #bd9228 100%);
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 800;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-main h3 {
+      color: #fff8df;
+      font-size: clamp(1.3rem, 2.7vw, 1.75rem);
+      line-height: 1.35;
+      margin-bottom: 0.8rem;
+    }
+
     .work-kicker {
       color: #e2bf58;
       font-size: 0.74rem;
@@ -429,53 +681,11 @@
       margin-bottom: 0.75rem;
     }
 
-    .work-with-me-card h3 {
-      color: #fff8df;
-      font-size: clamp(1.45rem, 3vw, 2rem);
-      line-height: 1.3;
-      letter-spacing: -0.5px;
-      margin-bottom: 1rem;
-    }
-
     .work-intro {
-      max-width: 900px;
       color: #d0cbbd;
-      font-size: 0.98rem;
+      font-size: 0.92rem;
       line-height: 1.85;
-      margin-bottom: 1.6rem;
-    }
-
-    .service-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 0.8rem 1.5rem;
-      list-style: none;
-      margin: 0 0 1.8rem;
-      padding: 0;
-    }
-
-    .service-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.65rem;
-      color: #e7e1d2;
-      font-size: 0.88rem;
-      line-height: 1.65;
-    }
-
-    .service-list li i {
-      color: #e2bf58;
-      margin-top: 0.3rem;
-      flex: 0 0 auto;
-    }
-
-    .work-note {
-      color: #aaa391;
-      font-size: 0.82rem;
-      line-height: 1.7;
-      border-left: 2px solid #bd9228;
-      padding-left: 0.9rem;
-      margin-bottom: 1.6rem;
+      margin-bottom: 1.1rem;
     }
 
     .platform-connect-title {
@@ -484,54 +694,154 @@
       font-weight: 800;
       letter-spacing: 1.5px;
       text-transform: uppercase;
-      margin-bottom: 0.85rem;
+      margin: 1.3rem 0 0.8rem;
     }
 
-    .platform-links {
+    .platform-book-stage {
+      position: relative;
+      height: 185px;
+      max-width: 670px;
+      margin: 0 auto 1rem;
+      perspective: 1100px;
+    }
+
+    .platform-page {
+      position: absolute;
+      top: 18px;
+      left: 15%;
+      width: 73%;
+      min-height: 112px;
+      padding: 1rem 1.1rem;
       display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
+      align-items: center;
+      gap: 0.9rem;
+      border: 1px solid rgba(212, 175, 55, 0.78);
+      border-radius: 13px;
+      text-align: left;
+      color: #fff1bd;
+      background: linear-gradient(140deg, #252015, #0c0c0b 74%);
+      box-shadow: 0 14px 25px rgba(0, 0, 0, 0.35);
+      cursor: pointer;
+      transform-origin: center bottom;
+      transition: transform 0.35s ease, left 0.35s ease, top 0.35s ease, box-shadow 0.35s ease, filter 0.35s ease;
     }
 
-    .platform-link {
+    .platform-page .page-icon {
+      width: 43px;
+      height: 43px;
+      flex: 0 0 43px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(212, 175, 55, 0.7);
+      border-radius: 12px;
+      color: #e2bf58;
+      background: rgba(212, 175, 55, 0.08);
+      font-size: 1.2rem;
+    }
+
+    .platform-page strong {
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .platform-page small {
+      display: block;
+      color: #bfb8a6;
+      font-size: 0.78rem;
+      line-height: 1.5;
+    }
+
+    .platform-page:nth-child(1) { z-index: 4; transform: translate(-7%, -6px) rotate(-4deg); }
+    .platform-page:nth-child(2) { z-index: 3; transform: translate(0, 5px) rotate(3deg); filter: brightness(0.89); }
+    .platform-page:nth-child(3) { z-index: 2; transform: translate(7%, 13px) rotate(-2deg); filter: brightness(0.78); }
+    .platform-page:nth-child(4) { z-index: 1; transform: translate(13%, 20px) rotate(4deg); filter: brightness(0.68); }
+
+    .platform-page.is-active {
+      z-index: 10;
+      left: 11%;
+      top: 7px;
+      transform: translate(0, -4px) rotate(0deg) scale(1.025);
+      filter: brightness(1.08);
+      background: linear-gradient(135deg, #2b2412, #0c0c0b 80%);
+      box-shadow: 0 20px 34px rgba(212, 175, 55, 0.12);
+    }
+
+    .platform-page:focus-visible {
+      outline: 3px solid #f7d977;
+      outline-offset: 4px;
+    }
+
+    .platform-detail-panel {
+      border: 1px solid rgba(212, 175, 55, 0.43);
+      border-radius: 15px;
+      padding: 1.2rem 1.25rem;
+      background: rgba(255, 255, 255, 0.025);
+      min-height: 160px;
+    }
+
+    .platform-detail-panel h4 {
+      color: #fff2c7;
+      font-size: 1.08rem;
+      margin-bottom: 0.55rem;
+    }
+
+    .platform-detail-panel p {
+      color: #c3c0b6;
+      font-size: 0.87rem;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .platform-detail-link {
       display: inline-flex;
       align-items: center;
-      justify-content: center;
-      gap: 0.6rem;
-      padding: 0.8rem 1.05rem;
-      border: 1px solid rgba(212, 175, 55, 0.72);
-      border-radius: 11px;
-      background: rgba(212, 175, 55, 0.06);
-      color: #fff1bd;
-      text-decoration: none;
-      font-weight: 800;
-      font-size: 0.86rem;
-      transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
-    }
-
-    .platform-link i {
-      color: #e2bf58;
-      font-size: 1rem;
-    }
-
-    .platform-link:hover {
-      transform: translateY(-3px);
+      gap: 0.55rem;
+      border: 1px solid rgba(212, 175, 55, 0.82);
+      border-radius: 10px;
       background: linear-gradient(135deg, #f4d675 0%, #bd9228 100%);
-      border-color: #f5d675;
       color: #11100b;
+      padding: 0.72rem 1rem;
+      text-decoration: none;
+      font-size: 0.84rem;
+      font-weight: 800;
     }
 
-    .platform-link:hover i {
-      color: #11100b;
+    @media (max-width: 868px) {
+      .nav-container {
+        padding: 0.8rem 1rem;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+      }
+      .nav-links {
+        display: flex;
+        order: 3;
+        width: 100%;
+        overflow-x: auto;
+        gap: 1.1rem;
+        padding: 0.25rem 0 0.4rem;
+        scrollbar-width: thin;
+      }
+      .nav-links li { flex: 0 0 auto; }
+      .nav-links a { font-size: 0.82rem; }
+      .lang-btn { margin-left: auto; }
+      .container { padding-top: 8.5rem; }
+      .hero { grid-template-columns: 1fr; }
+      .hero-text h1 { font-size: 2.3rem; }
+      .contact-layout { grid-template-columns: 1fr; }
+      .contact-profile { max-width: 420px; width: 100%; margin: 0 auto; }
+      .contact-photo-frame { aspect-ratio: 4 / 3; }
+      .about-detail { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 600px) {
-      .platform-links {
-        flex-direction: column;
-      }
-      .platform-link {
-        width: 100%;
-      }
+      .website-sample-card { grid-template-columns: auto 1fr; align-items: start; }
+      .website-sample-link { grid-column: 1 / -1; width: 100%; }
+      .platform-book-stage { height: 200px; }
+      .platform-page { left: 5%; width: 86%; padding: 0.8rem; }
+      .platform-page.is-active { left: 3%; }
+      .platform-page small { font-size: 0.72rem; }
+      .platform-page strong { font-size: 0.9rem; }
     }
 
     /* Footer */
@@ -562,11 +872,12 @@
   <header>
     <div class="nav-container">
       <div class="logo">Avenqora Vortax</div>
-      <ul class="nav-links">
-        <li><a href="#about" data-en="About" data-no="Om meg">About</a></li>
-        <li><a href="#ugc" data-en="UGC Content" data-no="UGC-innhold">UGC Content</a></li>
-        <li><a href="#certs" data-en="Certifications" data-no="Sertifiseringer">Certifications</a></li>
-        <li><a href="#platforms" data-en="Platforms & Hire" data-no="Plattformer">Platforms & Hire</a></li>
+      <ul class="nav-links" aria-label="Main navigation">
+        <li><a href="#home" data-nav-link data-en="Home" data-no="Hjem">Home</a></li>
+        <li><a href="#work" data-nav-link data-en="Work" data-no="Arbeid">Work</a></li>
+        <li><a href="#services" data-nav-link data-en="Services" data-no="Tjenester">Services</a></li>
+        <li><a href="#about-me" data-nav-link data-en="About" data-no="Om meg">About</a></li>
+        <li><a href="#contact" data-nav-link data-en="Contact" data-no="Kontakt">Contact</a></li>
       </ul>
       <button class="lang-btn" id="langToggle">
         <i class="fa-solid fa-globe"></i>
@@ -578,7 +889,7 @@
   <div class="container">
 
     <!-- Hero / Profile Section -->
-    <section class="hero" id="about">
+    <section class="hero" id="home">
       <div class="profile-img-container">
         <iframe src="https://drive.google.com/file/d/12J8YXdrJmK1oJZZNjwIYX6SmLsZOVgQs/preview" allow="autoplay"></iframe>
       </div>
@@ -594,7 +905,7 @@
           <a href="https://avenqoravortax.com" target="_blank" class="btn btn-primary">
             <i class="fa-solid fa-globe"></i> Avenqora Vortax
           </a>
-          <a href="#platforms" class="btn btn-secondary">
+          <a href="#contact" class="btn btn-secondary">
             <i class="fa-solid fa-paper-plane"></i> <span data-en="Hire Me" data-no="Ansett meg">Hire Me</span>
           </a>
         </div>
@@ -602,11 +913,21 @@
     </section>
 
     <!-- UGC Showcase Section (9 Videos) -->
-    <section id="ugc">
+    <section id="work">
       <h2 class="section-title">
-        <i class="fa-solid fa-clapperboard"></i> 
-        <span data-en="UGC Video Portfolio" data-no="UGC Videoportefølje">UGC Video Portfolio</span>
+        <i class="fa-solid fa-laptop-code"></i>
+        <span data-en="Website & UGC Work Samples" data-no="Nettside- og UGC-arbeidsprøver">Website & UGC Work Samples</span>
       </h2>
+      <article class="website-sample-card">
+        <div class="website-sample-icon"><i class="fa-solid fa-globe"></i></div>
+        <div class="website-sample-copy">
+          <div class="work-kicker">Featured Website Project</div>
+          <h3>Avenqora Vortax</h3>
+          <p>A digital technology publication and learning platform project. Explore the live website to review its content, publishing structure, and brand presentation.</p>
+        </div>
+        <a class="website-sample-link" href="https://avenqoravortax.com" target="_blank" rel="noopener noreferrer">Visit Website <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+      </article>
+      <p class="section-intro">Selected short-form UGC samples are shown below. Each video is embedded from its existing Google Drive preview link.</p>
       <div class="media-grid">
 
         <div class="video-card">
@@ -702,6 +1023,74 @@
       </div>
     </section>
 
+    <!-- Services Section -->
+    <section id="services">
+      <h2 class="section-title">
+        <i class="fa-solid fa-layer-group"></i>
+        <span data-en="Services" data-no="Tjenester">Services</span>
+      </h2>
+      <p class="section-intro">Practical SEO, publisher outreach, and short-form UGC support for brands, agencies, and website owners.</p>
+      <div class="services-grid">
+        <article class="service-card">
+          <i class="fa-solid fa-link"></i>
+          <h3>Off-Page SEO & Link Building</h3>
+          <p>Ethical backlink research, competitor link analysis, prospect qualification, and relationship-led link-building campaigns focused on relevant opportunities.</p>
+        </article>
+        <article class="service-card">
+          <i class="fa-solid fa-newspaper"></i>
+          <h3>Guest Posting & Publisher Outreach</h3>
+          <p>Publisher research, outreach support, paid-placement inquiries, campaign tracking, and communication with websites relevant to a client’s audience.</p>
+        </article>
+        <article class="service-card">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <h3>Keyword & Competitor Research</h3>
+          <p>Keyword discovery, search-intent checks, competitor content gaps, topic grouping, and AI-assisted research workflows to support content planning.</p>
+        </article>
+        <article class="service-card">
+          <i class="fa-solid fa-file-lines"></i>
+          <h3>On-Page SEO & Content Optimization</h3>
+          <p>Support with page titles, meta descriptions, heading structure, internal links, content organization, and search-focused page improvements.</p>
+        </article>
+        <article class="service-card">
+          <i class="fa-solid fa-location-dot"></i>
+          <h3>Local SEO Support</h3>
+          <p>Local keyword research, business-profile optimization guidance, local visibility checks, citation consistency, and competitor review.</p>
+        </article>
+        <article class="service-card">
+          <i class="fa-solid fa-clapperboard"></i>
+          <h3>UGC Video Content</h3>
+          <p>Short-form product showcases, lifestyle-style videos, presenter-led concepts, and UGC-style creative samples for brand campaigns.</p>
+        </article>
+      </div>
+      <a href="#contact" class="btn btn-primary services-cta"><i class="fa-solid fa-paper-plane"></i> Discuss a Project</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about-me">
+      <h2 class="section-title">
+        <i class="fa-solid fa-user"></i>
+        <span data-en="About Me" data-no="Om meg">About Me</span>
+      </h2>
+      <div class="about-detail">
+        <article class="about-copy">
+          <h3>Muhammad Jalal Din</h3>
+          <p>I work across off-page SEO, guest-post outreach, link-building research, and short-form UGC content. My portfolio brings together practical service work, video samples, and my digital publication project, Avenqora Vortax.</p>
+          <p>My focus is on relevant opportunities, clear communication, ethical SEO practices, and deliverables that support each client's goals. I welcome conversations with businesses, publishers, and agencies looking for outreach or content support.</p>
+        </article>
+        <aside class="about-highlights">
+          <h3>Focus Areas</h3>
+          <ul>
+            <li><i class="fa-solid fa-check-circle"></i><span>Off-page SEO and guest publishing outreach</span></li>
+            <li><i class="fa-solid fa-check-circle"></i><span>On-page, local, and keyword research</span></li>
+            <li><i class="fa-solid fa-check-circle"></i><span>AI-assisted research workflows</span></li>
+            <li><i class="fa-solid fa-check-circle"></i><span>Short-form UGC and product storytelling</span></li>
+            <li><i class="fa-solid fa-check-circle"></i><span>Owner & CEO of Avenqora Vortax</span></li>
+          </ul>
+          <a href="#certs" class="about-cert-link"><i class="fa-solid fa-award"></i> View Certifications</a>
+        </aside>
+      </div>
+    </section>
+
     <!-- Certifications Section: Original Semrush Certificate PDFs -->
     <section id="certs">
       <h2 class="section-title">
@@ -769,38 +1158,59 @@
       </div>
     </section>
 
-    <!-- Work With Me: Services & Profile Links -->
-    <section id="platforms">
+    <!-- Contact Section: Profile photo and interactive platform book -->
+    <section id="contact">
       <h2 class="section-title">
         <i class="fa-solid fa-paper-plane"></i>
-        <span data-en="Work With Me & Connect" data-no="Samarbeid med meg">Work With Me & Connect</span>
+        <span data-en="Contact & Connect" data-no="Kontakt og tilkobling">Contact & Connect</span>
       </h2>
 
       <div class="platforms-grid">
-        <article class="work-with-me-card">
-          <div class="work-kicker">Muhammad Jalal Din · SEO & Outreach</div>
-          <h3 data-en="SEO, Guest Posting & Link Building Support" data-no="SEO, gjesteinnlegg og lenkebygging">SEO, Guest Posting & Link Building Support</h3>
-          <p class="work-intro" data-en="I help businesses, agencies, and website owners strengthen organic search visibility through practical SEO research and publisher outreach. From identifying relevant websites and researching competitors to planning guest-post campaigns and improving on-page SEO, I focus on relevant opportunities, clear communication, and work aligned with each client's goals." data-no="Jeg hjelper bedrifter, byråer og nettstedseiere med å styrke synligheten i organiske søk gjennom SEO-research og kontakt med utgivere. Fra å finne relevante nettsteder og undersøke konkurrenter til å planlegge gjesteinnleggskampanjer og forbedre SEO på siden, fokuserer jeg på relevante muligheter, tydelig kommunikasjon og kundens mål.">I help businesses, agencies, and website owners strengthen organic search visibility through practical SEO research and publisher outreach. From identifying relevant websites and researching competitors to planning guest-post campaigns and improving on-page SEO, I focus on relevant opportunities, clear communication, and work aligned with each client's goals.</p>
+        <div class="work-with-me-card">
+          <div class="contact-layout">
+            <aside class="contact-profile">
+              <div class="contact-photo-frame">
+                <iframe src="https://drive.google.com/file/d/12J8YXdrJmK1oJZZNjwIYX6SmLsZOVgQs/preview" title="Muhammad Jalal Din profile image" loading="lazy" allow="autoplay"></iframe>
+              </div>
+              <h3>Muhammad Jalal Din</h3>
+              <div class="profile-role">Owner & CEO, Avenqora Vortax<br>UGC Creator & Off-Page SEO Strategist</div>
+              <p>For SEO campaigns, publisher outreach, UGC projects, or professional collaboration, choose a platform to view the relevant profile details.</p>
+              <a class="contact-email" href="mailto:avenqoravortax@gmail.com"><i class="fa-solid fa-envelope"></i> Email Me</a>
+            </aside>
 
-          <ul class="service-list">
-            <li><i class="fa-solid fa-check-circle"></i><span data-en="Off-page SEO and white-hat link-building strategy" data-no="Off-page SEO og etisk lenkebygging">Off-page SEO and white-hat link-building strategy</span></li>
-            <li><i class="fa-solid fa-check-circle"></i><span data-en="Guest posting, publisher research, and outreach campaigns" data-no="Gjesteinnlegg, utgiverresearch og outreach-kampanjer">Guest posting, publisher research, and outreach campaigns</span></li>
-            <li><i class="fa-solid fa-check-circle"></i><span data-en="Backlink and competitor analysis" data-no="Analyse av tilbakekoblinger og konkurrenter">Backlink and competitor analysis</span></li>
-            <li><i class="fa-solid fa-check-circle"></i><span data-en="On-page SEO and content optimization" data-no="On-page SEO og innholdsoptimalisering">On-page SEO and content optimization</span></li>
-            <li><i class="fa-solid fa-check-circle"></i><span data-en="Keyword research, search intent, and AI-assisted research workflows" data-no="Søkeordsanalyse, søkeintensjon og AI-støttet research">Keyword research, search intent, and AI-assisted research workflows</span></li>
-            <li><i class="fa-solid fa-check-circle"></i><span data-en="Local SEO and technical SEO support" data-no="Lokal SEO og teknisk SEO-støtte">Local SEO and technical SEO support</span></li>
-          </ul>
+            <div class="contact-main">
+              <div class="work-kicker">Work With Me · Connect</div>
+              <h3>Choose a platform to see its details</h3>
+              <p class="work-intro">These layered cards are arranged like pages in a book. Select a card to open its information below, then use the button to visit that profile or website.</p>
 
-          <p class="work-note" data-en="Every project is different. Share your website, target market, and campaign goals so we can discuss an appropriate approach before work begins." data-no="Hvert prosjekt er forskjellig. Del nettstedet ditt, målmarkedet og kampanjemålene dine, så kan vi diskutere en passende tilnærming før arbeidet starter.">Every project is different. Share your website, target market, and campaign goals so we can discuss an appropriate approach before work begins.</p>
+              <div class="platform-connect-title">Select a profile</div>
+              <div class="platform-book-stage" role="group" aria-label="Professional profile cards">
+                <button type="button" class="platform-page is-active" data-platform="fiverr" aria-controls="platform-detail" aria-pressed="true">
+                  <span class="page-icon"><i class="fa-solid fa-bolt"></i></span>
+                  <span><strong>Fiverr</strong><small>SEO gigs & guest-post support</small></span>
+                </button>
+                <button type="button" class="platform-page" data-platform="upwork" aria-controls="platform-detail" aria-pressed="false">
+                  <span class="page-icon"><i class="fa-solid fa-briefcase"></i></span>
+                  <span><strong>Upwork</strong><small>Project work & B2B campaigns</small></span>
+                </button>
+                <button type="button" class="platform-page" data-platform="linkedin" aria-controls="platform-detail" aria-pressed="false">
+                  <span class="page-icon"><i class="fa-brands fa-linkedin-in"></i></span>
+                  <span><strong>LinkedIn</strong><small>Professional connections</small></span>
+                </button>
+                <button type="button" class="platform-page" data-platform="avenqora" aria-controls="platform-detail" aria-pressed="false">
+                  <span class="page-icon"><i class="fa-solid fa-globe"></i></span>
+                  <span><strong>Avenqora Vortax</strong><small>Website & publication project</small></span>
+                </button>
+              </div>
 
-          <div class="platform-connect-title" data-en="Hire me or connect" data-no="Ansett meg eller ta kontakt">Hire me or connect</div>
-          <div class="platform-links">
-            <a href="https://www.fiverr.com/professional328" target="_blank" rel="noopener noreferrer" class="platform-link"><i class="fa-solid fa-bolt"></i><span>Fiverr Profile</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            <a href="https://upwork.com/freelancers/~mjalaldin" target="_blank" rel="noopener noreferrer" class="platform-link"><i class="fa-solid fa-briefcase"></i><span>Upwork Profile</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            <a href="https://linkedin.com/in/mjalaldin" target="_blank" rel="noopener noreferrer" class="platform-link"><i class="fa-brands fa-linkedin"></i><span>Connect on LinkedIn</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            <a href="https://avenqoravortax.com" target="_blank" rel="noopener noreferrer" class="platform-link"><i class="fa-solid fa-globe"></i><span>Avenqora Vortax</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <div class="platform-detail-panel" id="platform-detail" role="status" aria-live="polite">
+                <h4 id="platform-detail-title">Fiverr — SEO & Guest Posting</h4>
+                <p id="platform-detail-description">Explore gig-based services for guest-post outreach, link-building support, publisher research, and related SEO tasks. Check the profile for current offerings and availability.</p>
+                <a class="platform-detail-link" id="platform-detail-link" href="https://www.fiverr.com/professional328" target="_blank" rel="noopener noreferrer">Visit Fiverr Profile <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              </div>
+            </div>
           </div>
-        </article>
+        </div>
       </div>
     </section>
 
@@ -825,6 +1235,62 @@
         } else {
           element.textContent = element.getAttribute('data-en');
         }
+      });
+    });
+  </script>
+  <script>
+    // Click a layered platform page to reveal its individual profile details.
+    const platformProfiles = {
+      fiverr: {
+        title: "Fiverr — SEO & Guest Posting",
+        description: "Explore gig-based services for guest-post outreach, link-building support, publisher research, and related SEO tasks. Check the profile for current offerings and availability.",
+        url: "https://www.fiverr.com/professional328",
+        label: "Visit Fiverr Profile"
+      },
+      upwork: {
+        title: "Upwork — SEO Projects & B2B Campaigns",
+        description: "Use this profile for project inquiries, ongoing campaign discussions, publisher research, link-building work, and SEO support for agencies or business clients.",
+        url: "https://upwork.com/freelancers/~mjalaldin",
+        label: "Visit Upwork Profile"
+      },
+      linkedin: {
+        title: "LinkedIn — Professional Networking",
+        description: "Connect professionally to discuss SEO, digital publishing, outreach collaboration, content projects, and business opportunities.",
+        url: "https://linkedin.com/in/mjalaldin",
+        label: "Connect on LinkedIn"
+      },
+      avenqora: {
+        title: "Avenqora Vortax — Website & Publication",
+        description: "Visit the digital publication project associated with this portfolio to explore its technology content, publishing direction, and brand presentation.",
+        url: "https://avenqoravortax.com",
+        label: "Visit Avenqora Vortax"
+      }
+    };
+
+    document.querySelectorAll("[data-platform]").forEach((card) => {
+      card.addEventListener("click", () => {
+        const profile = platformProfiles[card.getAttribute("data-platform")];
+        if (!profile) return;
+        document.querySelectorAll("[data-platform]").forEach((other) => {
+          const selected = other === card;
+          other.classList.toggle("is-active", selected);
+          other.setAttribute("aria-pressed", String(selected));
+        });
+        document.getElementById("platform-detail-title").textContent = profile.title;
+        document.getElementById("platform-detail-description").textContent = profile.description;
+        const link = document.getElementById("platform-detail-link");
+        link.href = profile.url;
+        link.textContent = profile.label + " ";
+        const icon = document.createElement("i");
+        icon.className = "fa-solid fa-arrow-up-right-from-square";
+        link.appendChild(icon);
+      });
+    });
+
+    document.querySelectorAll("[data-nav-link]").forEach((navLink) => {
+      navLink.addEventListener("click", () => {
+        document.querySelectorAll("[data-nav-link]").forEach((other) => other.classList.remove("active"));
+        navLink.classList.add("active");
       });
     });
   </script>
