@@ -957,6 +957,211 @@
     .nav-links a.active {
       color: #e2bf58;
     }
+  
+
+    /* Portfolio-wide premium warm-charcoal refresh */
+    :root {
+      --bg-dark: #191811;
+      --card-bg: rgba(43, 39, 30, 0.94);
+      --border-color: rgba(219, 190, 120, 0.26);
+      --accent-blue: #e4c471;
+      --accent-purple: #bd914e;
+      --accent-gradient: linear-gradient(135deg, #f8e4ad 0%, #e2bf68 48%, #b4873d 100%);
+      --text-main: #f6f0e4;
+      --text-muted: #bdb5a5;
+    }
+
+    body {
+      background-color: #191811;
+      background-image:
+        radial-gradient(ellipse at 9% 5%, rgba(168, 126, 48, 0.2), transparent 30rem),
+        radial-gradient(ellipse at 90% 23%, rgba(119, 91, 45, 0.15), transparent 34rem),
+        radial-gradient(ellipse at 52% 78%, rgba(145, 119, 69, 0.09), transparent 36rem),
+        linear-gradient(160deg, #201e16 0%, #191811 45%, #242016 100%);
+      background-attachment: fixed;
+    }
+
+    header {
+      background: rgba(31, 29, 21, 0.93);
+      border-bottom-color: rgba(220, 190, 113, 0.25);
+      box-shadow: 0 8px 26px rgba(0, 0, 0, 0.18);
+    }
+
+    .logo {
+      background: linear-gradient(135deg, #fff0bb 0%, #e2bf68 52%, #b98b3e 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+
+    .nav-links a { color: #cec5b1; }
+    .nav-links a:hover,
+    .nav-links a.active { color: #f1d477; }
+
+    .lang-btn {
+      background: rgba(218, 184, 94, 0.08);
+      border-color: rgba(213, 184, 111, 0.3);
+      color: #f1e8d3;
+    }
+
+    .lang-btn:hover {
+      border-color: rgba(241, 212, 119, 0.8);
+      background: rgba(218, 184, 94, 0.14);
+    }
+
+    .section-title { color: #f5eddc; }
+    .section-title i {
+      color: #e2bf68;
+      filter: drop-shadow(0 0 8px rgba(226, 191, 104, 0.18));
+    }
+
+    .hero-text .subtitle { color: #e7c970; }
+
+    .btn-primary {
+      background: var(--accent-gradient);
+      color: #241e10;
+      box-shadow: 0 8px 22px rgba(190, 146, 54, 0.13);
+    }
+
+    .btn-primary:hover {
+      opacity: 0.98;
+      box-shadow: 0 10px 25px rgba(190, 146, 54, 0.22);
+    }
+
+    .btn-secondary {
+      background: rgba(224, 193, 115, 0.06);
+      border-color: rgba(213, 184, 111, 0.34);
+      color: #f2ead7;
+    }
+
+    .btn-secondary:hover {
+      border-color: #e2bf68;
+      background: rgba(224, 193, 115, 0.12);
+    }
+
+    .video-card {
+      background: linear-gradient(150deg, rgba(55, 49, 36, 0.98), rgba(38, 35, 27, 0.98));
+      border-color: rgba(213, 184, 111, 0.28);
+      box-shadow: 0 9px 28px rgba(0, 0, 0, 0.19);
+    }
+
+    .video-card:hover {
+      border-color: rgba(232, 198, 108, 0.8);
+      box-shadow: 0 16px 34px rgba(0, 0, 0, 0.25), 0 0 24px rgba(212, 175, 55, 0.08);
+    }
+
+    .video-wrapper {
+      background: radial-gradient(ellipse at center, #413925 0%, #2e291e 54%, #242117 100%);
+    }
+
+    .card-info h3 { color: #f4ead2; }
+    .card-info p { color: #c5bba6; }
+
+    .cert-card {
+      background:
+        radial-gradient(ellipse at 90% 0%, rgba(194, 151, 61, 0.12), transparent 45%),
+        linear-gradient(145deg, #352f21 0%, #2b281e 58%, #242219 100%);
+      border-color: rgba(224, 191, 104, 0.7);
+      box-shadow: inset 0 1px 0 rgba(255, 225, 130, 0.1), 0 12px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .cert-card:hover {
+      border-color: #f1d477;
+      box-shadow: inset 0 1px 0 rgba(255, 225, 130, 0.14), 0 18px 38px rgba(119, 88, 29, 0.18);
+    }
+
+    .website-sample-card {
+      background:
+        radial-gradient(ellipse at top left, rgba(218, 184, 94, 0.13), transparent 45%),
+        linear-gradient(145deg, #352f21 0%, #2a271e 58%, #242219 100%);
+      border-color: rgba(224, 191, 104, 0.66);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+    }
+
+    .service-card,
+    .about-copy,
+    .about-highlights {
+      background: linear-gradient(145deg, rgba(53, 47, 35, 0.96), rgba(40, 37, 28, 0.97));
+      border-color: rgba(213, 184, 111, 0.28);
+      box-shadow: 0 12px 26px rgba(0, 0, 0, 0.14);
+    }
+
+    .service-card:hover {
+      border-color: rgba(232, 198, 108, 0.8);
+      box-shadow: 0 14px 30px rgba(137, 104, 43, 0.14);
+    }
+
+    .service-card h3,
+    .about-copy h3,
+    .about-highlights h3 { color: #f4dfaa; }
+
+    .service-card p,
+    .about-copy p,
+    .about-highlights li { color: #cbc2b0; }
+
+    .work-with-me-card {
+      background:
+        radial-gradient(ellipse at top right, rgba(184, 134, 11, 0.2), transparent 40%),
+        radial-gradient(ellipse at bottom left, rgba(130, 104, 56, 0.15), transparent 43%),
+        linear-gradient(145deg, #352f21 0%, #2a271e 58%, #242219 100%);
+      border-color: rgba(231, 199, 116, 0.8);
+      box-shadow: inset 0 1px 0 rgba(255, 225, 130, 0.12), 0 18px 45px rgba(0, 0, 0, 0.24);
+    }
+
+    .contact-profile {
+      background: linear-gradient(155deg, rgba(69, 59, 39, 0.75), rgba(42, 38, 28, 0.92));
+      border-color: rgba(224, 191, 104, 0.5);
+    }
+
+    .contact-photo-frame {
+      background: #2c271b;
+      border-color: rgba(224, 191, 104, 0.66);
+      box-shadow: 0 9px 24px rgba(0, 0, 0, 0.26);
+    }
+
+    .contact-main h3 { color: #f8edcf; }
+
+    .platform-page {
+      background: linear-gradient(140deg, #4b3e26 0%, #38301f 70%, #302a1d 100%);
+      border-color: rgba(231, 199, 116, 0.8);
+      box-shadow: 0 14px 25px rgba(0, 0, 0, 0.28);
+    }
+
+    .platform-page:nth-child(2) { filter: brightness(0.97); }
+    .platform-page:nth-child(3) { filter: brightness(0.91); }
+    .platform-page:nth-child(4) { filter: brightness(0.86); }
+
+    .platform-page.is-active {
+      background: radial-gradient(ellipse at top left, rgba(247, 217, 119, 0.17), transparent 50%), linear-gradient(135deg, #504126, #34301f 80%);
+      filter: brightness(1.08);
+      box-shadow: 0 20px 34px rgba(149, 111, 37, 0.19);
+    }
+
+    .platform-detail-panel {
+      background: linear-gradient(145deg, rgba(64, 55, 37, 0.82), rgba(46, 42, 31, 0.92));
+      border-color: rgba(213, 184, 111, 0.44);
+    }
+
+    footer {
+      background: linear-gradient(180deg, rgba(55, 48, 35, 0.2), rgba(39, 35, 26, 0.75));
+      border-top-color: rgba(213, 184, 111, 0.26);
+      color: #c4baa6;
+    }
+
+    ::selection {
+      background: rgba(226, 191, 104, 0.35);
+      color: #fff8df;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+      }
+    }
+
   </style>
 </head>
 <body>
