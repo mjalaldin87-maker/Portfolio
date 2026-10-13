@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muhammad Jalal Din | Owner & CEO - Avenqora Vortax</title>
+  
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-dark: #080a0f;
+      --card-bg: rgba(18, 22, 31, 0.75);
+      --border-color: rgba(255, 255, 255, 0.1);
+      --accent-blue: #38bdf8;
+      --accent-purple: #818cf8;
+      --accent-gradient: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+      --text-main: #f3f4f6;
+      --text-muted: #9ca3af;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    /* Glassmorphism Header */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(8, 10, 15, 0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .nav-container {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.1rem 2rem;
+    }
+
+    .logo {
+      font-weight: 800;
+      font-size: 1.3rem;
+      letter-spacing: -0.5px;
+      background: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.8rem;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.92rem;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-blue);
+    }
+
+    .lang-btn {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      padding: 0.45rem 0.9rem;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 0.82rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.3s;
+    }
+
+    .lang-btn:hover {
+      border-color: var(--accent-blue);
+      background: rgba(56, 189, 248, 0.1);
+    }
+
+    /* Container Layout */
+    .container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 7.5rem 2rem 4rem;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 3.5rem;
+      align-items: center;
+      margin-bottom: 6.5rem;
+    }
+
+    .profile-img-container {
+      position: relative;
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+      background: #000;
+    }
+
+    .profile-img-container iframe {
+      width: 100%;
+      height: 460px;
+      border: none;
+      display: block;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+      letter-spacing: -1px;
+    }
+
+    .hero-text .subtitle {
+      font-size: 1.2rem;
+      color: var(--accent-blue);
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-text p {
+      color: var(--text-muted);
+      margin-bottom: 2.2rem;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 0.85rem 1.8rem;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: all 0.3s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .btn-primary {
+      background: var(--accent-gradient);
+      color: #080a0f;
+    }
+
+    .btn-primary:hover {
+      opacity: 0.92;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(56, 189, 248, 0.3);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--accent-blue);
+      transform: translateY(-3px);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    /* Section Typography */
+    .section-title {
+      font-size: 2.1rem;
+      font-weight: 800;
+      margin-bottom: 2.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      letter-spacing: -0.5px;
+    }
+
+    .section-title i {
+      color: var(--accent-blue);
+    }
+
+    /* UGC Video Grid */
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      margin-bottom: 6.5rem;
+    }
+
+    .video-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 18px;
+      overflow: hidden;
+      transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+    }
+
+    .video-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--accent-blue);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+    }
+
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 177.77%; /* 9:16 vertical ratio */
+      height: 0;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .card-info {
+      padding: 1.3rem;
+    }
+
+    .card-info h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+    }
+
+    .card-info p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    /* Certificates Grid */
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.8rem;
+      margin-bottom: 6.5rem;
+    }
+
+    .cert-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 18px;
+      overflow: hidden;
+      transition: all 0.3s;
+    }
+
+    .cert-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--accent-purple);
+      box-shadow: 0 15px 30px rgba(129, 140, 248, 0.15);
+    }
+
+    .cert-img-wrapper {
+      position: relative;
+      padding-bottom: 75%; /* 4:3 landscape ratio */
+      height: 0;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .cert-img-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* Platforms Grid */
+    .platforms-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.6rem;
+      margin-bottom: 6.5rem;
+    }
+
+    .platform-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 18px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      text-decoration: none;
+      color: var(--text-main);
+      transition: all 0.3s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .platform-card i {
+      font-size: 2.6rem;
+      color: var(--accent-blue);
+      transition: transform 0.3s;
+    }
+
+    .platform-card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+
+    .platform-card p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    .platform-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--accent-blue);
+      background: rgba(56, 189, 248, 0.06);
+    }
+
+    .platform-card:hover i {
+      transform: scale(1.1);
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border-color);
+      padding: 3.5rem 2rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 868px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+      .nav-links {
+        display: none;
+      }
+      .hero-text h1 {
+        font-size: 2.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <div class="nav-container">
+      <div class="logo">Avenqora Vortax</div>
+      <ul class="nav-links">
+        <li><a href="#about" data-en="About" data-no="Om meg">About</a></li>
+        <li><a href="#ugc" data-en="UGC Content" data-no="UGC-innhold">UGC Content</a></li>
+        <li><a href="#certs" data-en="Certifications" data-no="Sertifiseringer">Certifications</a></li>
+        <li><a href="#platforms" data-en="Platforms & Hire" data-no="Plattformer">Platforms & Hire</a></li>
+      </ul>
+      <button class="lang-btn" id="langToggle">
+        <i class="fa-solid fa-globe"></i>
+        <span id="langLabel">NO / EN</span>
+      </button>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <!-- Hero / Profile Section -->
+    <section class="hero" id="about">
+      <div class="profile-img-container">
+        <iframe src="https://drive.google.com/file/d/12J8YXdrJmK1oJZZNjwIYX6SmLsZOVgQs/preview" allow="autoplay"></iframe>
+      </div>
+      <div class="hero-text">
+        <h1>Muhammad Jalal Din</h1>
+        <div class="subtitle" data-en="Owner & CEO, Avenqora Vortax | UGC Creator & Off-Page SEO Strategist" data-no="Eier og administrerende direktør, Avenqora Vortax | UGC Skaper og SEO-strateg">
+          Owner & CEO, Avenqora Vortax | UGC Creator & Off-Page SEO Strategist
+        </div>
+        <p data-en="Pioneering modern link building, guest publishing campaigns, and high-converting short-form User Generated Content (UGC) across global tech, SaaS, lifestyle, and business niches." data-no="Pioner innen moderne lenkebygging, gjesteinnleggskampanjer og UGC-kortformsinnhold av høy kvalitet for globale teknologi-, SaaS- og bedriftsnisjer.">
+          Pioneering modern link building, guest publishing campaigns, and high-converting short-form User Generated Content (UGC) across global tech, SaaS, lifestyle, and business niches.
+        </p>
+        <div class="cta-buttons">
+          <a href="https://avenqoravortax.com" target="_blank" class="btn btn-primary">
+            <i class="fa-solid fa-globe"></i> Avenqora Vortax
+          </a>
+          <a href="#platforms" class="btn btn-secondary">
+            <i class="fa-solid fa-paper-plane"></i> <span data-en="Hire Me" data-no="Ansett meg">Hire Me</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- UGC Showcase Section (9 Videos) -->
+    <section id="ugc">
+      <h2 class="section-title">
+        <i class="fa-solid fa-clapperboard"></i> 
+        <span data-en="UGC Video Portfolio" data-no="UGC Videoportefølje">UGC Video Portfolio</span>
+      </h2>
+      <div class="media-grid">
+
+        <div class="video-card">
+          <div class="video-wrapper">
+            <iframe src="https://drive.google.com/file/d/1k-2P2bUj8XkXzP4-yZ6d-J8XkXzP4-yZ/preview" allow="autoplay"></iframe>
+          </div>
+          <div class="card-info">
+            <h3 data-en="Brand Showcase Video 1" data-no="Merkevarevideo 1">Brand Showcase Video 1</h3>
+            <p>JordanMaison.Official</p>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-wrapper">
+            <iframe src="https://drive.google.com/file/d/1_a3X2bUj8XkXzP4-yZ6d-J8XkXzP4-yZ/preview" allow="autoplay"></iframe>
+          </div>
+          <div class="card-info">
+            <h3 data-en="Product Review UGC 2" data-no="Produktanmeldelse UGC 2">Product Review UGC 2</h3>
+            <p>JordanMaison.Official</p>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-wrapper">
+            <iframe src="https://drive.google.com/file/d/1_-gdqV7CVgnhqeqQoRt_CNZ3hMml5Nt8/preview" allow="autoplay"></iframe>
+          </div>
+          <div class="card-info">
+            <h3 data-en="Lifestyle & Tech Review 3" data-no="Livsstil og teknologi 3">Lifestyle & Tech Review 3</h3>
+            <p>JordanMaison.Official</p>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-wrapper">
+            <iframe src="https://drive.google.com/file/d/13Y5q3ZcbBePH2jvXfpouC2R5b5tv5vlP/preview" allow="autoplay"></iframe>
+          </div>
+          <div class="card-info">
+            <h3 data-en="UGC Short Promo 4" data-no="UGC Kort kampanje 4">UGC Short Promo 4</h3>
+            <p>JordanMaison.Official</p>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-wrapper">
+            <iframe src="https://drive.google.com/file/d/1_GzfKtBYauUAwzhrAF-CLd-FGc-81H_o/preview" allow="autoplay"></iframe>
+          </div>
+          <div class="card-info">
+            <h3 data-en="SaaS & Product Demo 5" data-no="SaaS og produktdemo 5">SaaS & Product Demo 5</h3>
+            <p>JordanMaison.Official</p>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-wrapper">
+            <iframe src="https://drive.google.com/file/d/1n1-sugmywxg0EMNk9t8KtyngMOMZXxSh/preview" allow="autoplay"></iframe>
+          </div>
+          <div class="card-info">
+            <h3 data-en="Engagement Video 6" data-no="Engasjementsvideo 6">Engagement Video 6</h3>
+            <p>JordanMaison.Official</p>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-wrapper">
+            <iframe src="https://drive.google.com/file/d/1z3j7A_rqf649s2pBW6inVT-n4IL7afho/preview" allow="autoplay"></iframe>
+          </div>
+          <div class="card-info">
+            <h3 data-en="Product Feature Highlight 7" data-no="Produktfunksjon 7">Product Feature Highlight 7</h3>
+            <p>JordanMaison.Official</p>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-wrapper">
+            <iframe src="https://drive.google.com/file/d/1lhU2jdU2X4CDZsCQ6P7W5UBZ6CG-Y8rI/preview" allow="autoplay"></iframe>
+          </div>
+          <div class="card-info">
+            <h3 data-en="Creative UGC Content 8" data-no="Kreativt UGC-innhold 8">Creative UGC Content 8</h3>
+            <p>JordanMaison.Official</p>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-wrapper">
+            <iframe src="https://drive.google.com/file/d/1sg6hOVmR0nQV70AxQOcEuOp2FBU2B52s/preview" allow="autoplay"></iframe>
+          </div>
+          <div class="card-info">
+            <h3 data-en="Fashion & Apparel Review UGC" data-no="Mote og klesanmeldelse UGC">Fashion & Apparel Review UGC</h3>
+            <p>JordanMaison.Official</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Certifications Section (5 Certificates) -->
+    <section id="certs">
+      <h2 class="section-title">
+        <i class="fa-solid fa-award"></i> 
+        <span data-en="Certifications & Training" data-no="Sertifiseringer og opplæring">Certifications & Training</span>
+      </h2>
+      <div class="cert-grid">
+
+        <div class="cert-card">
+          <div class="cert-img-wrapper">
+            <iframe src="https://drive.google.com/file/d/1X3v_X2bUj8XkXzP4-yZ6d-J8XkXzP4-yZ/preview"></iframe>
+          </div>
+          <div class="card-info">
+            <h3>Off-Page SEO Certification</h3>
+            <p>SEMrush Academy</p>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-img-wrapper">
+            <iframe src="https://drive.google.com/file/d/1Y3v_X2bUj8XkXzP4-yZ6d-J8XkXzP4-yZ/preview"></iframe>
+          </div>
+          <div class="card-info">
+            <h3>On-Page & Technical SEO</h3>
+            <p>SEMrush Academy</p>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-img-wrapper">
+            <iframe src="https://drive.google.com/file/d/1Z3v_X2bUj8XkXzP4-yZ6d-J8XkXzP4-yZ/preview"></iframe>
+          </div>
+          <div class="card-info">
+            <h3>Local SEO Optimization</h3>
+            <p>SEMrush Academy</p>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-img-wrapper">
+            <iframe src="https://drive.google.com/file/d/16oX9BCgGA8WUJOdJa1ibJEn7f4oHlfbL/preview"></iframe>
+          </div>
+          <div class="card-info">
+            <h3>Link Building Specialist</h3>
+            <p>Verified Certification</p>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-img-wrapper">
+            <iframe src="https://drive.google.com/file/d/1UM2vUBjoyk_IFZ7dzdHTiuthRTLOz3iG/preview"></iframe>
+          </div>
+          <div class="card-info">
+            <h3 data-en="SEO & Guest Blogging Training" data-no="SEO og gjesteblogging trening">SEO & Guest Blogging Training</h3>
+            <p>Nextage Solution (Private Institute)</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Hire Me & Platforms Section -->
+    <section id="platforms">
+      <h2 class="section-title">
+        <i class="fa-solid fa-paper-plane"></i> 
+        <span data-en="Platforms & Freelance Profiles" data-no="Plattformer og frilansprofiler">Platforms & Freelance Profiles</span>
+      </h2>
+      <div class="platforms-grid">
+
+        <a href="https://fiverr.com/mjalaldin" target="_blank" class="platform-card">
+          <i class="fa-solid fa-bolt"></i>
+          <h3>Fiverr Profile</h3>
+          <p data-en="Order Guest Posts & Link Building Gigs" data-no="Bestill gjesteinnlegg og lenkebygging">Order Guest Posts & Link Building Gigs</p>
+        </a>
+
+        <a href="https://upwork.com/freelancers/~mjalaldin" target="_blank" class="platform-card">
+          <i class="fa-solid fa-briefcase"></i>
+          <h3>Upwork Profile</h3>
+          <p data-en="Hire for Long-Term B2B Campaigns" data-no="Ansett for langsiktige B2B-kampanjer">Hire for Long-Term B2B Campaigns</p>
+        </a>
+
+        <a href="https://linkedin.com/in/mjalaldin" target="_blank" class="platform-card">
+          <i class="fa-brands fa-linkedin"></i>
+          <h3>LinkedIn Profile</h3>
+          <p data-en="Connect professionally with Owner & CEO" data-no="Koble til profesjonelt med CEO">Connect professionally with Owner & CEO</p>
+        </a>
+
+        <a href="https://avenqoravortax.com" target="_blank" class="platform-card">
+          <i class="fa-solid fa-building"></i>
+          <h3>Avenqora Vortax</h3>
+          <p data-en="Official Digital Publication Platform" data-no="Offisiell digital publikasjon">Official Digital Publication Platform</p>
+        </a>
+
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Muhammad Jalal Din | Owner & CEO, Avenqora Vortax. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Instant Language Switcher Script -->
+  <script>
+    let currentLang = 'EN';
+    const langBtn = document.getElementById('langToggle');
+
+    langBtn.addEventListener('click', () => {
+      currentLang = currentLang === 'EN' ? 'NO' : 'EN';
+      
+      document.querySelectorAll('[data-en]').forEach(element => {
+        if (currentLang === 'NO') {
+          element.textContent = element.getAttribute('data-no');
+        } else {
+          element.textContent = element.getAttribute('data-en');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
