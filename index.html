@@ -392,54 +392,146 @@
       transform: translateY(-1px);
     }
 
-    /* Platforms Grid */
+    /* Premium Black & Gold Work-With-Me Panel */
     .platforms-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.6rem;
+      display: block;
       margin-bottom: 6.5rem;
     }
 
-    .platform-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border-color);
-      border-radius: 18px;
-      padding: 2rem 1.5rem;
-      text-align: center;
-      text-decoration: none;
-      color: var(--text-main);
-      transition: all 0.3s;
+    .work-with-me-card {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(1.5rem, 4vw, 3rem);
+      border: 1px solid rgba(212, 175, 55, 0.76);
+      border-radius: 22px;
+      background:
+        radial-gradient(ellipse at top right, rgba(184, 134, 11, 0.13), transparent 40%),
+        linear-gradient(145deg, #17140d 0%, #0b0b0b 58%, #050505 100%);
+      box-shadow: inset 0 1px 0 rgba(255, 225, 130, 0.08), 0 18px 45px rgba(0, 0, 0, 0.32);
+    }
+
+    .work-with-me-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 10%;
+      right: 10%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #f7d977, #b8860b, transparent);
+    }
+
+    .work-kicker {
+      color: #e2bf58;
+      font-size: 0.74rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+
+    .work-with-me-card h3 {
+      color: #fff8df;
+      font-size: clamp(1.45rem, 3vw, 2rem);
+      line-height: 1.3;
+      letter-spacing: -0.5px;
+      margin-bottom: 1rem;
+    }
+
+    .work-intro {
+      max-width: 900px;
+      color: #d0cbbd;
+      font-size: 0.98rem;
+      line-height: 1.85;
+      margin-bottom: 1.6rem;
+    }
+
+    .service-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 0.8rem 1.5rem;
+      list-style: none;
+      margin: 0 0 1.8rem;
+      padding: 0;
+    }
+
+    .service-list li {
       display: flex;
-      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.65rem;
+      color: #e7e1d2;
+      font-size: 0.88rem;
+      line-height: 1.65;
+    }
+
+    .service-list li i {
+      color: #e2bf58;
+      margin-top: 0.3rem;
+      flex: 0 0 auto;
+    }
+
+    .work-note {
+      color: #aaa391;
+      font-size: 0.82rem;
+      line-height: 1.7;
+      border-left: 2px solid #bd9228;
+      padding-left: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+
+    .platform-connect-title {
+      color: #f0d477;
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 0.85rem;
+    }
+
+    .platform-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .platform-link {
+      display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 1rem;
+      gap: 0.6rem;
+      padding: 0.8rem 1.05rem;
+      border: 1px solid rgba(212, 175, 55, 0.72);
+      border-radius: 11px;
+      background: rgba(212, 175, 55, 0.06);
+      color: #fff1bd;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 0.86rem;
+      transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
     }
 
-    .platform-card i {
-      font-size: 2.6rem;
-      color: var(--accent-blue);
-      transition: transform 0.3s;
+    .platform-link i {
+      color: #e2bf58;
+      font-size: 1rem;
     }
 
-    .platform-card h3 {
-      font-size: 1.25rem;
-      font-weight: 700;
+    .platform-link:hover {
+      transform: translateY(-3px);
+      background: linear-gradient(135deg, #f4d675 0%, #bd9228 100%);
+      border-color: #f5d675;
+      color: #11100b;
     }
 
-    .platform-card p {
-      font-size: 0.88rem;
-      color: var(--text-muted);
+    .platform-link:hover i {
+      color: #11100b;
     }
 
-    .platform-card:hover {
-      transform: translateY(-6px);
-      border-color: var(--accent-blue);
-      background: rgba(56, 189, 248, 0.06);
-    }
-
-    .platform-card:hover i {
-      transform: scale(1.1);
+    @media (max-width: 600px) {
+      .platform-links {
+        flex-direction: column;
+      }
+      .platform-link {
+        width: 100%;
+      }
     }
 
     /* Footer */
@@ -677,38 +769,38 @@
       </div>
     </section>
 
-    <!-- Hire Me & Platforms Section -->
+    <!-- Work With Me: Services & Profile Links -->
     <section id="platforms">
       <h2 class="section-title">
-        <i class="fa-solid fa-paper-plane"></i> 
-        <span data-en="Platforms & Freelance Profiles" data-no="Plattformer og frilansprofiler">Platforms & Freelance Profiles</span>
+        <i class="fa-solid fa-paper-plane"></i>
+        <span data-en="Work With Me & Connect" data-no="Samarbeid med meg">Work With Me & Connect</span>
       </h2>
+
       <div class="platforms-grid">
+        <article class="work-with-me-card">
+          <div class="work-kicker">Muhammad Jalal Din · SEO & Outreach</div>
+          <h3 data-en="SEO, Guest Posting & Link Building Support" data-no="SEO, gjesteinnlegg og lenkebygging">SEO, Guest Posting & Link Building Support</h3>
+          <p class="work-intro" data-en="I help businesses, agencies, and website owners strengthen organic search visibility through practical SEO research and publisher outreach. From identifying relevant websites and researching competitors to planning guest-post campaigns and improving on-page SEO, I focus on relevant opportunities, clear communication, and work aligned with each client's goals." data-no="Jeg hjelper bedrifter, byråer og nettstedseiere med å styrke synligheten i organiske søk gjennom SEO-research og kontakt med utgivere. Fra å finne relevante nettsteder og undersøke konkurrenter til å planlegge gjesteinnleggskampanjer og forbedre SEO på siden, fokuserer jeg på relevante muligheter, tydelig kommunikasjon og kundens mål.">I help businesses, agencies, and website owners strengthen organic search visibility through practical SEO research and publisher outreach. From identifying relevant websites and researching competitors to planning guest-post campaigns and improving on-page SEO, I focus on relevant opportunities, clear communication, and work aligned with each client's goals.</p>
 
-        <a href="https://fiverr.com/mjalaldin" target="_blank" class="platform-card">
-          <i class="fa-solid fa-bolt"></i>
-          <h3>Fiverr Profile</h3>
-          <p data-en="Order Guest Posts & Link Building Gigs" data-no="Bestill gjesteinnlegg og lenkebygging">Order Guest Posts & Link Building Gigs</p>
-        </a>
+          <ul class="service-list">
+            <li><i class="fa-solid fa-check-circle"></i><span data-en="Off-page SEO and white-hat link-building strategy" data-no="Off-page SEO og etisk lenkebygging">Off-page SEO and white-hat link-building strategy</span></li>
+            <li><i class="fa-solid fa-check-circle"></i><span data-en="Guest posting, publisher research, and outreach campaigns" data-no="Gjesteinnlegg, utgiverresearch og outreach-kampanjer">Guest posting, publisher research, and outreach campaigns</span></li>
+            <li><i class="fa-solid fa-check-circle"></i><span data-en="Backlink and competitor analysis" data-no="Analyse av tilbakekoblinger og konkurrenter">Backlink and competitor analysis</span></li>
+            <li><i class="fa-solid fa-check-circle"></i><span data-en="On-page SEO and content optimization" data-no="On-page SEO og innholdsoptimalisering">On-page SEO and content optimization</span></li>
+            <li><i class="fa-solid fa-check-circle"></i><span data-en="Keyword research, search intent, and AI-assisted research workflows" data-no="Søkeordsanalyse, søkeintensjon og AI-støttet research">Keyword research, search intent, and AI-assisted research workflows</span></li>
+            <li><i class="fa-solid fa-check-circle"></i><span data-en="Local SEO and technical SEO support" data-no="Lokal SEO og teknisk SEO-støtte">Local SEO and technical SEO support</span></li>
+          </ul>
 
-        <a href="https://upwork.com/freelancers/~mjalaldin" target="_blank" class="platform-card">
-          <i class="fa-solid fa-briefcase"></i>
-          <h3>Upwork Profile</h3>
-          <p data-en="Hire for Long-Term B2B Campaigns" data-no="Ansett for langsiktige B2B-kampanjer">Hire for Long-Term B2B Campaigns</p>
-        </a>
+          <p class="work-note" data-en="Every project is different. Share your website, target market, and campaign goals so we can discuss an appropriate approach before work begins." data-no="Hvert prosjekt er forskjellig. Del nettstedet ditt, målmarkedet og kampanjemålene dine, så kan vi diskutere en passende tilnærming før arbeidet starter.">Every project is different. Share your website, target market, and campaign goals so we can discuss an appropriate approach before work begins.</p>
 
-        <a href="https://linkedin.com/in/mjalaldin" target="_blank" class="platform-card">
-          <i class="fa-brands fa-linkedin"></i>
-          <h3>LinkedIn Profile</h3>
-          <p data-en="Connect professionally with Owner & CEO" data-no="Koble til profesjonelt med CEO">Connect professionally with Owner & CEO</p>
-        </a>
-
-        <a href="https://avenqoravortax.com" target="_blank" class="platform-card">
-          <i class="fa-solid fa-building"></i>
-          <h3>Avenqora Vortax</h3>
-          <p data-en="Official Digital Publication Platform" data-no="Offisiell digital publikasjon">Official Digital Publication Platform</p>
-        </a>
-
+          <div class="platform-connect-title" data-en="Hire me or connect" data-no="Ansett meg eller ta kontakt">Hire me or connect</div>
+          <div class="platform-links">
+            <a href="https://www.fiverr.com/professional328" target="_blank" rel="noopener noreferrer" class="platform-link"><i class="fa-solid fa-bolt"></i><span>Fiverr Profile</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <a href="https://upwork.com/freelancers/~mjalaldin" target="_blank" rel="noopener noreferrer" class="platform-link"><i class="fa-solid fa-briefcase"></i><span>Upwork Profile</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <a href="https://linkedin.com/in/mjalaldin" target="_blank" rel="noopener noreferrer" class="platform-link"><i class="fa-brands fa-linkedin"></i><span>Connect on LinkedIn</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <a href="https://avenqoravortax.com" target="_blank" rel="noopener noreferrer" class="platform-link"><i class="fa-solid fa-globe"></i><span>Avenqora Vortax</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </article>
       </div>
     </section>
 
