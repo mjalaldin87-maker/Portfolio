@@ -1563,6 +1563,38 @@
     .ugc-category-video-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:1.55rem}
     @media(max-width:600px){.ugc-category-nav{padding:.9rem}.ugc-category-nav-links{gap:.5rem}.ugc-category-link{min-height:39px;padding:.58rem .75rem;font-size:.77rem}.ugc-category-video-grid{grid-template-columns:minmax(0,1fr);gap:1.2rem}}
 
+
+    /* Keep every category card at a consistent, readable maximum width. */
+    .ugc-category-video-grid {
+      grid-template-columns: repeat(auto-fill, minmax(280px, 320px));
+      justify-content: start;
+      align-items: start;
+    }
+
+    .ugc-category-video-grid > .video-card {
+      width: 100%;
+      max-width: 320px;
+      min-width: 0;
+      justify-self: start;
+    }
+
+    .ugc-category-video-grid .video-wrapper {
+      width: 100%;
+      aspect-ratio: 9 / 16;
+    }
+
+    @media (max-width: 600px) {
+      .ugc-category-video-grid {
+        grid-template-columns: minmax(0, min(100%, 320px));
+        justify-content: center;
+      }
+
+      .ugc-category-video-grid > .video-card {
+        max-width: 320px;
+        justify-self: center;
+      }
+    }
+
 </style>
 </head>
 <body>
@@ -1632,6 +1664,31 @@
       </article>
       <p class="section-intro">Selected short-form UGC samples are shown below.</p>
 
+
+      <article class="ugc-production-note" id="ugc-production-note" aria-labelledby="ugc-production-title">
+        <div class="ugc-production-note-heading">
+          <span class="ugc-production-note-icon" aria-hidden="true"><i class="fa-solid fa-clapperboard"></i></span>
+          <div>
+            <p class="work-kicker">UGC Production</p>
+            <h3 id="ugc-production-title">These Are Starter Samples — We Can Go Further</h3>
+          </div>
+        </div>
+        <p class="ugc-production-note-intro">The videos below demonstrate our starting style and creative approach. We can develop more advanced, brand-specific UGC based on your brief, goals, timeline, and order scope. A larger or more detailed order can allow for deeper concept development, custom scripts, more scenes, refined editing, sound design, captions, and tailored voiceovers.</p>
+        <div class="ugc-production-note-details">
+          <div class="ugc-production-note-detail">
+            <h4>Flexible Production</h4>
+            <p>Each project is planned around the agreed scope. The level of creative detail, refinement, and post-production can scale with the order requirements and budget.</p>
+          </div>
+          <div class="ugc-production-note-detail">
+            <h4>Tools &amp; Language Options</h4>
+            <p>Depending on the project, our workflow may include CapCut and Canva for editing and design, ElevenLabs for voice and audio, and other suitable professional tools. We are not limited to a single tool. We can also adapt scripts, voiceovers, and captions for a wide range of languages, subject to language and voice availability for the project.</p>
+          </div>
+          <div class="ugc-production-note-detail">
+            <h4>Responsible Use of AI Models</h4>
+            <p>The models featured in these samples are AI-generated. We do not use a real person's image or likeness without appropriate permission.</p>
+          </div>
+        </div>
+      </article>
 
       <nav class="ugc-category-nav" id="ugc-category-nav" aria-label="Jump to UGC video category">
         <p class="ugc-category-nav-label" data-en="Explore by category" data-no="Utforsk etter kategori">Explore by category</p>
@@ -2410,30 +2467,7 @@
 
       </div>
 
-      <article class="ugc-production-note" id="ugc-production-note" aria-labelledby="ugc-production-title">
-        <div class="ugc-production-note-heading">
-          <span class="ugc-production-note-icon" aria-hidden="true"><i class="fa-solid fa-clapperboard"></i></span>
-          <div>
-            <p class="work-kicker">UGC Production</p>
-            <h3 id="ugc-production-title">These Are Starter Samples — We Can Go Further</h3>
-          </div>
-        </div>
-        <p class="ugc-production-note-intro">The videos below demonstrate our starting style and creative approach. We can develop more advanced, brand-specific UGC based on your brief, goals, timeline, and order scope. A larger or more detailed order can allow for deeper concept development, custom scripts, more scenes, refined editing, sound design, captions, and tailored voiceovers.</p>
-        <div class="ugc-production-note-details">
-          <div class="ugc-production-note-detail">
-            <h4>Flexible Production</h4>
-            <p>Each project is planned around the agreed scope. The level of creative detail, refinement, and post-production can scale with the order requirements and budget.</p>
-          </div>
-          <div class="ugc-production-note-detail">
-            <h4>Tools &amp; Language Options</h4>
-            <p>Depending on the project, our workflow may include CapCut and Canva for editing and design, ElevenLabs for voice and audio, and other suitable professional tools. We are not limited to a single tool. We can also adapt scripts, voiceovers, and captions for a wide range of languages, subject to language and voice availability for the project.</p>
-          </div>
-          <div class="ugc-production-note-detail">
-            <h4>Responsible Use of AI Models</h4>
-            <p>The models featured in these samples are AI-generated. We do not use a real person's image or likeness without appropriate permission.</p>
-          </div>
-        </div>
-      </article>
+      
     </section>
 
         <!-- Services Section -->
