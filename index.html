@@ -1859,6 +1859,33 @@
       }
     }
 
+
+    /* Four separate profile/project tabs, appended without removing Home/Work/Services/About/Contact. */
+    .nav-links a.nav-profile-tab {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 0.38rem 0.72rem;
+      border: 1px solid rgba(77, 228, 220, 0.3);
+      border-radius: 999px;
+      color: #d8e9e4;
+      background: linear-gradient(120deg, rgba(232, 198, 111, 0.07), rgba(77, 228, 220, 0.055), rgba(180, 160, 255, 0.06));
+      font-size: 0.82rem;
+      white-space: nowrap;
+    }
+    .nav-links a.nav-profile-tab:hover,
+    .nav-links a.nav-profile-tab:focus-visible {
+      color: #77f7ef;
+      border-color: rgba(119, 247, 239, 0.75);
+      background: rgba(77, 228, 220, 0.1);
+    }
+    @media (max-width: 868px) {
+      .nav-links a.nav-profile-tab {
+        padding: 0.32rem 0.62rem;
+        font-size: 0.78rem;
+      }
+    }
+
 </style>
 </head>
 <body>
@@ -1873,6 +1900,10 @@
         <li><a href="#services" data-nav-link data-en="Services" data-no="Tjenester">Services</a></li>
         <li><a href="#about-me" data-nav-link data-en="About" data-no="Om meg">About</a></li>
         <li><a href="#contact" data-nav-link data-en="Contact" data-no="Kontakt">Contact</a></li>
+        <li><a class="nav-profile-tab" href="/Portfolio/fiverr/">Fiverr</a></li>
+        <li><a class="nav-profile-tab" href="/Portfolio/upwork/">Upwork</a></li>
+        <li><a class="nav-profile-tab" href="/Portfolio/linkedin/">LinkedIn</a></li>
+        <li><a class="nav-profile-tab" href="/Portfolio/avenqora/">Avenqora Vortax</a></li>
       </ul>
       <button class="lang-btn" id="langToggle">
         <i class="fa-solid fa-globe"></i>
