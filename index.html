@@ -1319,7 +1319,126 @@
       overflow-wrap: anywhere;
     }
 
-  </style>
+  
+    
+    /* Profile cards: larger, aligned, and animated once into place */
+    .platform-book-stage {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      align-items: stretch;
+      gap: 14px;
+      height: auto;
+      max-width: 780px;
+      margin: 1rem auto 1.25rem;
+      perspective: none;
+    }
+
+    .platform-book-stage > .platform-page {
+      position: relative;
+      inset: auto;
+      width: 100%;
+      min-width: 0;
+      min-height: 128px;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 1.2rem 1.25rem;
+      gap: 1rem;
+      transform: translateY(0) rotate(0deg) scale(1);
+      transform-origin: center;
+      filter: none;
+      opacity: 1;
+      z-index: auto;
+      border-radius: 15px;
+      box-shadow: 0 10px 23px rgba(0, 0, 0, 0.25);
+      transition:
+        opacity 0.55s ease,
+        transform 0.55s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease;
+    }
+
+    .platform-book-stage > .platform-page .page-icon {
+      width: 50px;
+      height: 50px;
+      flex: 0 0 50px;
+      border-radius: 13px;
+      font-size: 1.35rem;
+    }
+
+    .platform-book-stage > .platform-page strong {
+      font-size: 1.08rem;
+      line-height: 1.35;
+    }
+
+    .platform-book-stage > .platform-page small {
+      font-size: 0.82rem;
+      line-height: 1.5;
+    }
+
+    .platform-book-stage > .platform-page.is-active {
+      transform: translateY(0) scale(1);
+      filter: none;
+      border-color: rgba(247, 217, 119, 0.95);
+      background:
+        radial-gradient(ellipse at top left, rgba(247, 217, 119, 0.15), transparent 55%),
+        linear-gradient(135deg, #504126, #34301f 80%);
+      box-shadow: 0 12px 25px rgba(149, 111, 37, 0.18);
+    }
+
+    .platform-book-stage > .platform-page:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 13px 27px rgba(0, 0, 0, 0.3);
+    }
+
+    .platform-book-stage.has-entrance:not(.is-visible) > .platform-page {
+      opacity: 0;
+      transform: translateY(22px) scale(0.98);
+    }
+
+    .platform-book-stage.is-visible > .platform-page {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    .platform-book-stage.has-entrance > .platform-page:nth-child(1) { transition-delay: 0s; }
+    .platform-book-stage.has-entrance > .platform-page:nth-child(2) { transition-delay: 0.12s; }
+    .platform-book-stage.has-entrance > .platform-page:nth-child(3) { transition-delay: 0.24s; }
+    .platform-book-stage.has-entrance > .platform-page:nth-child(4) { transition-delay: 0.36s; }
+
+    @media (max-width: 600px) {
+      .platform-book-stage {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        max-width: 100%;
+      }
+
+      .platform-book-stage > .platform-page {
+        min-height: 98px;
+        padding: 1rem 1.1rem;
+      }
+
+      .platform-book-stage > .platform-page .page-icon {
+        width: 46px;
+        height: 46px;
+        flex-basis: 46px;
+      }
+
+      .platform-book-stage > .platform-page small {
+        font-size: 0.8rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .platform-book-stage > .platform-page,
+      .platform-book-stage.has-entrance:not(.is-visible) > .platform-page {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+    }
+
+</style>
 </head>
 <body>
 
@@ -2133,7 +2252,7 @@
             <div class="contact-main">
               <div class="work-kicker">Work With Me · Connect</div>
               <h3>Choose a platform to see its details</h3>
-              <p class="work-intro">These layered cards are arranged like pages in a book. Select a card to open its information below, then use the button to visit that profile or website.</p>
+              <p class="work-intro">Choose a profile below to view its details, then use the button to visit that platform or website.</p>
 
               <div class="platform-connect-title">Select a profile</div>
               <div class="platform-book-stage" role="group" aria-label="Professional profile cards">
@@ -2245,6 +2364,27 @@
         navLink.classList.add("active");
       });
     });
-  </script>
+  
+    // Reveal the aligned profile cards once when this section enters the viewport.
+    const platformStage = document.querySelector(".platform-book-stage");
+    if (platformStage) {
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (!reduceMotion && "IntersectionObserver" in window) {
+        platformStage.classList.add("has-entrance");
+        const platformStageObserver = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              platformStage.classList.add("is-visible");
+              platformStageObserver.unobserve(platformStage);
+            }
+          });
+        }, { threshold: 0.18 });
+        platformStageObserver.observe(platformStage);
+      } else {
+        platformStage.classList.add("is-visible");
+      }
+    }
+
+</script>
 </body>
 </html>
