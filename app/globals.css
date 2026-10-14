@@ -27,6 +27,13 @@ body {
 }
 .profile-page-inner { width: min(1120px, 100%); margin: 0 auto; }
 .profile-topbar {
+  position: static;
+  top: auto;
+  z-index: auto;
+  width: auto;
+  background: transparent;
+  backdrop-filter: none;
+  box-shadow: none;
   display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap;
   padding: .9rem 0 1.4rem; margin-bottom: 2.2rem;
   border-bottom: 1px solid rgba(220, 190, 113, .22);
