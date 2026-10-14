@@ -266,6 +266,10 @@ header .portfolio-home-tabs {
   margin: 0 auto;
   padding: 0 2rem 0.72rem;
 }
+
+/* Keep page content below both stacked header rows on desktop and mobile. */
+.container { padding-top: 10.5rem; }
+
 .profile-page-tabs {
   max-width: 1120px;
   margin: 0 auto 1.05rem;
@@ -275,6 +279,7 @@ header .portfolio-home-tabs {
 .profile-page-tabs .portfolio-profile-tab { min-height: 39px; }
 
 @media (max-width: 868px) {
+  .container { padding-top: 11.5rem; }
   header .portfolio-home-tabs {
     padding: 0 1rem 0.6rem;
     gap: 0.42rem;
