@@ -2745,9 +2745,9 @@
         {key:"other",en:"Other",no:"Annet",icon:"fa-layer-group"}
       ];
       function cardText(card){
-        const parts=[],title=card.querySelector("h3"),frame=card.querySelector("iframe[title]");
+        const parts=[],title=card.querySelector("h3");
         if(title)parts.push(title.getAttribute("data-en")||title.textContent||"");
-        if(frame)parts.push(frame.getAttribute("title")||"");
+        // Prefer the visible card title/topic/niche over iframe titles, which may be generic or differ.
         Array.from(card.querySelectorAll(".ugc-detail-box")).slice(0,2).forEach(box=>{
           const p=box.querySelector("p");if(p)parts.push(p.getAttribute("data-en")||p.textContent||"");
         });
