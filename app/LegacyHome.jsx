@@ -26,36 +26,30 @@ export default function LegacyHome() {
       console.error("Some legacy homepage interactions could not initialise.", error);
     }
 
-    // Add a visible four-tab navigation directly into the existing fixed header.
-    // The original homepage HTML and every video-card frame remain untouched.
-    const siteHeader = rootRef.current.querySelector("header");
-    const navContainer = siteHeader?.querySelector(".nav-container");
+    // Append the four profile/project links to the ORIGINAL five-link navigation row.
+    // Existing Home/Work/Services/About/Contact links and original video-card markup are untouched.
+    const navList = rootRef.current.querySelector("header .nav-links");
     const handlers = [];
-    let profileNav = null;
+    const basePath = window.location.pathname.startsWith("/Portfolio") ? "/Portfolio" : "";
 
-    if (siteHeader && navContainer && !siteHeader.querySelector(".portfolio-home-tabs")) {
-      profileNav = document.createElement("nav");
-      profileNav.className = "portfolio-profile-tabs portfolio-home-tabs";
-      profileNav.setAttribute("aria-label", "Profile and project pages");
-      const basePath = window.location.pathname.startsWith("/Portfolio") ? "/Portfolio" : "";
-
+    if (navList && !navList.querySelector("[data-profile-tab]")) {
       profileTabs.forEach((item) => {
+        const listItem = document.createElement("li");
         const link = document.createElement("a");
-        link.className = "portfolio-profile-tab";
+        link.className = "portfolio-profile-tab nav-profile-tab";
         link.href = basePath + "/" + item.slug + "/";
         link.textContent = item.label;
         link.setAttribute("data-profile-tab", item.slug);
         const handler = (event) => {
-          // Keep in-app tab navigation within the SPA, including GitHub Pages basePath.
           if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
           event.preventDefault();
           router.push("/" + item.slug);
         };
         link.addEventListener("click", handler);
         handlers.push([link, handler]);
-        profileNav.appendChild(link);
+        listItem.appendChild(link);
+        navList.appendChild(listItem);
       });
-      navContainer.insertAdjacentElement("afterend", profileNav);
     }
 
     // The four profile/project cards also open their dedicated SPA views without a browser reload.
@@ -72,8 +66,12 @@ export default function LegacyHome() {
     });
 
     return () => {
-      handlers.forEach(([element, handler]) => element.removeEventListener("click", handler));
-      profileNav?.remove();
+      handlers.forEach(([element, handler]) => {
+        element.removeEventListener("click", handler);
+        if (element.parentElement?.parentElement?.classList.contains("nav-links")) {
+          element.parentElement.remove();
+        }
+      });
     };
   }, [router]);
 
