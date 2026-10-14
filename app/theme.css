@@ -1,0 +1,211 @@
+/* Central visual theme for the portfolio. Change the tokens below to recolour the whole site. */
+:root {
+  --theme-gold: #e8c66f;
+  --theme-gold-light: #fff1c2;
+  --theme-cyan: #4de4dc;
+  --theme-cyan-bright: #77f7ef;
+  --theme-violet: #b4a0ff;
+  --theme-violet-deep: #8875f2;
+  --theme-rose: #f4a9d3;
+  --theme-heading-card: #f6df9b;
+  --theme-heading-muted: #d9cfb4;
+
+  /* Original homepage tokens */
+  --accent-blue: var(--theme-cyan);
+  --accent-purple: var(--theme-violet);
+  --accent-gradient: linear-gradient(115deg, var(--theme-gold) 0%, var(--theme-cyan) 52%, var(--theme-violet) 100%);
+  --border-color: rgba(125, 220, 222, 0.18);
+  --card-bg: rgba(22, 25, 34, 0.82);
+  --spa-gold: var(--theme-gold);
+  --spa-gold-light: var(--theme-gold-light);
+  --spa-border: rgba(111, 222, 219, 0.22);
+}
+
+/* High-impact headings: gold flows into cyan and violet. */
+.hero-text h1,
+.profile-hero h1 {
+  font-weight: 900;
+  letter-spacing: -0.045em;
+  background-image: linear-gradient(105deg, #fff7df 0%, var(--theme-gold) 26%, var(--theme-cyan) 61%, var(--theme-violet) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-wrap: balance;
+}
+
+.hero-text h1 {
+  text-shadow: 0 0 30px rgba(77, 228, 220, 0.06);
+}
+
+.section-title,
+.profile-block-heading {
+  font-weight: 850;
+  letter-spacing: -0.025em;
+}
+
+.section-title {
+  position: relative;
+  gap: 0.8rem;
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid rgba(77, 228, 220, 0.22);
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: clamp(5rem, 18vw, 10rem);
+  height: 2px;
+  background: var(--accent-gradient);
+  border-radius: 99px;
+}
+
+.section-title > span {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-title > i,
+.ugc-category-heading > i {
+  color: var(--theme-cyan) !important;
+  filter: drop-shadow(0 0 9px rgba(77, 228, 220, 0.2));
+}
+
+.ugc-category-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid rgba(180, 160, 255, 0.22);
+  font-weight: 850;
+  letter-spacing: -0.02em;
+}
+
+.ugc-category-heading > span {
+  color: var(--theme-cyan-bright);
+  font-weight: 850;
+}
+
+.website-sample-copy h3,
+.service-card h3,
+.card-info h3,
+.cert-card h3,
+.upwork-detail-card h3,
+.linkedin-detail-card h3,
+.avenqora-project-card h3,
+.about-copy h3,
+.about-highlights h3,
+.contact-profile h3,
+.contact-main h3,
+.platform-detail-panel h4,
+.ugc-production-note h3,
+.profile-card h3 {
+  color: var(--theme-heading-card);
+  font-weight: 800;
+  letter-spacing: -0.012em;
+}
+
+.website-sample-copy h3,
+.card-info h3,
+.service-card h3,
+.contact-main h3,
+.profile-card h3 {
+  transition: color 180ms ease;
+}
+
+.website-sample-card:hover h3,
+.video-card:hover .card-info h3,
+.service-card:hover h3,
+.profile-card:hover h3 {
+  color: var(--theme-cyan-bright);
+}
+
+.work-kicker,
+.profile-eyebrow {
+  color: var(--theme-cyan) !important;
+  font-weight: 850 !important;
+  letter-spacing: 0.14em;
+}
+
+.subtitle {
+  color: var(--theme-cyan-bright) !important;
+  font-weight: 750;
+}
+
+.btn-primary,
+.profile-back,
+.profile-cta:not(.profile-cta-secondary) {
+  background: linear-gradient(120deg, var(--theme-gold) 0%, #f8df96 44%, var(--theme-cyan) 100%);
+  border-color: rgba(119, 247, 239, 0.45);
+  box-shadow: 0 8px 26px rgba(77, 228, 220, 0.08);
+}
+
+.btn-primary:hover,
+.profile-back:hover,
+.profile-cta:not(.profile-cta-secondary):hover {
+  filter: brightness(1.07);
+  box-shadow: 0 10px 30px rgba(77, 228, 220, 0.14);
+}
+
+.btn-secondary,
+.profile-cta-secondary {
+  border-color: rgba(180, 160, 255, 0.4);
+}
+
+.btn-secondary:hover,
+.profile-cta-secondary:hover {
+  border-color: var(--theme-violet);
+  color: var(--theme-violet) !important;
+}
+
+.profile-block-heading {
+  color: var(--theme-cyan-bright);
+  padding-bottom: 0.55rem;
+  border-bottom: 1px solid rgba(77, 228, 220, 0.18);
+}
+
+.profile-block-heading i {
+  color: var(--theme-violet) !important;
+}
+
+.profile-card::before {
+  background: linear-gradient(90deg, transparent, var(--theme-cyan), var(--theme-violet), transparent) !important;
+}
+
+.profile-tags span {
+  border-color: rgba(180, 160, 255, 0.32);
+  background: rgba(180, 160, 255, 0.06);
+  color: #e6dcff;
+}
+
+.profile-metric,
+.profile-snapshot {
+  border-color: rgba(77, 228, 220, 0.2);
+}
+
+.profile-text-link {
+  color: var(--theme-cyan-bright);
+}
+
+.profile-text-link:hover {
+  color: var(--theme-violet);
+}
+
+.profile-other-links a[aria-current="page"] {
+  border-color: var(--theme-cyan);
+  color: var(--theme-cyan-bright);
+  background: rgba(77, 228, 220, 0.08);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .website-sample-copy h3,
+  .card-info h3,
+  .service-card h3,
+  .contact-main h3,
+  .profile-card h3 {
+    transition: none;
+  }
+}
