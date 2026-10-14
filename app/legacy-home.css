@@ -1848,3 +1848,45 @@
       }
     }
 
+
+/* Mobile-only alignment repair for the 30 UGC video cards.
+   Keep the desktop layout and all non-video sections unchanged. */
+@media (max-width: 600px) {
+  .ugc-category-video-grid > .video-card {
+    box-sizing: border-box;
+    justify-self: center;
+    margin-inline: auto;
+  }
+
+  .ugc-category-video-grid > .video-card .video-wrapper {
+    position: relative;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    height: auto;
+    min-width: 0;
+    aspect-ratio: 9 / 16;
+    padding: 0;
+    padding-bottom: 0;
+    overflow: hidden;
+    border: 1px solid rgba(224, 191, 104, 0.6);
+    border-radius: 14px;
+    background: #252219;
+  }
+
+  .ugc-category-video-grid > .video-card .video-wrapper iframe {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    bottom: 6px;
+    left: 6px;
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: none;
+    margin: 0;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 8px;
+  }
+}
