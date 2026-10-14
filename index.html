@@ -592,6 +592,104 @@
       margin-top: 1.3rem;
     }
 
+    /* Fiverr guest-posting showcase — follows the existing dark-and-gold card system */
+    .fiverr-gigs-grid {
+      margin-bottom: 2.25rem;
+    }
+
+    .fiverr-gig-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      overflow: hidden;
+    }
+
+    .fiverr-gig-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 14%;
+      right: 14%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #f7d977, #b8860b, transparent);
+    }
+
+    .fiverr-gig-kicker {
+      color: #e2bf58;
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 1.25px;
+      text-transform: uppercase;
+      margin-bottom: 0.55rem;
+    }
+
+    .fiverr-gig-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin: 0.25rem 0 1rem;
+    }
+
+    .fiverr-gig-tags span {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.32rem 0.58rem;
+      border: 1px solid rgba(212, 175, 55, 0.32);
+      border-radius: 999px;
+      background: rgba(212, 175, 55, 0.07);
+      color: #e6d9ae;
+      font-size: 0.7rem;
+      line-height: 1.35;
+    }
+
+    .fiverr-package-list {
+      list-style: none;
+      display: grid;
+      gap: 0.58rem;
+      margin-top: auto;
+      padding-top: 0.95rem;
+      border-top: 1px solid rgba(212, 175, 55, 0.25);
+      color: #d8d1bd;
+      font-size: 0.79rem;
+      line-height: 1.6;
+    }
+
+    .fiverr-package-list strong {
+      color: #f0d477;
+      font-weight: 800;
+    }
+
+    .fiverr-gig-note {
+      color: #a9a18e;
+      font-size: 0.76rem;
+      line-height: 1.65;
+      margin-top: 0.95rem;
+    }
+
+    .fiverr-showcase-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      margin: 0.1rem 0 5rem;
+      padding: 0.82rem 1.2rem;
+      border: 1px solid rgba(212, 175, 55, 0.82);
+      border-radius: 10px;
+      background: linear-gradient(135deg, #f4d675 0%, #bd9228 100%);
+      color: #11100b;
+      text-decoration: none;
+      text-align: center;
+      font-size: 0.85rem;
+      font-weight: 800;
+      transition: filter 0.25s ease, transform 0.25s ease;
+    }
+
+    .fiverr-showcase-cta:hover {
+      filter: brightness(1.08);
+      transform: translateY(-1px);
+    }
+
     /* About */
     .about-detail {
       display: grid;
@@ -2512,6 +2610,81 @@
       <a href="#contact" class="btn btn-primary services-cta"><i class="fa-solid fa-paper-plane"></i> Discuss a Project</a>
     </section>
 
+    <!-- Fiverr Guest Posting Showcase -->
+    <section id="fiverr-gigs">
+      <h2 class="section-title">
+        <i class="fa-solid fa-newspaper"></i>
+        <span data-en="Fiverr Guest Posting Gigs" data-no="Fiverr-gjestepostingstjenester">Fiverr Guest Posting Gigs</span>
+      </h2>
+      <p class="section-intro">My Fiverr services focus on niche-relevant guest-post opportunities and blogger outreach. Publisher fit, available site metrics, link attributes, and delivery terms are checked against the campaign brief before an order is finalized.</p>
+
+      <div class="services-grid fiverr-gigs-grid">
+        <article class="service-card fiverr-gig-card">
+          <div class="fiverr-gig-kicker">01 / Technology & SaaS</div>
+          <h3>Tech & SaaS Guest Posts</h3>
+          <p>Guest-post placements for technology, software, SaaS, and AI brands, with attention to topic relevance, organic-traffic signals, and the publisher’s quality.</p>
+          <div class="fiverr-gig-tags">
+            <span>Technology</span><span>Software</span><span>SaaS</span><span>AI</span>
+          </div>
+          <ul class="fiverr-package-list">
+            <li><strong>Basic:</strong> 1 tech guest post + 1 backlink</li>
+            <li><strong>Standard:</strong> 3 guest posts with contextual link opportunities</li>
+            <li><strong>Premium:</strong> 5 Tech/SaaS guest posts</li>
+          </ul>
+          <p class="fiverr-gig-note">Your gig notes mention high-DA targets and indexing terms. Exact site metrics, link attributes, availability, and indexing conditions should be confirmed for the selected placement.</p>
+        </article>
+
+        <article class="service-card fiverr-gig-card">
+          <div class="fiverr-gig-kicker">02 / Health & Fitness</div>
+          <h3>Health & Fitness Guest Posts</h3>
+          <p>Niche-focused outreach for health, fitness, and medical-related campaigns, prioritizing subject relevance and suitable publisher audiences.</p>
+          <div class="fiverr-gig-tags">
+            <span>Health</span><span>Fitness</span><span>Medical</span>
+          </div>
+          <ul class="fiverr-package-list">
+            <li><strong>Focus:</strong> Relevant health and fitness publications</li>
+            <li><strong>Review:</strong> Publisher niche, quality, and available traffic signals</li>
+            <li><strong>Scope:</strong> Matched to the client's target topic and brief</li>
+          </ul>
+          <p class="fiverr-gig-note">The available publisher list and the exact placement terms are confirmed before ordering.</p>
+        </article>
+
+        <article class="service-card fiverr-gig-card">
+          <div class="fiverr-gig-kicker">03 / Business & Finance</div>
+          <h3>Business, Finance & Home Improvement</h3>
+          <p>Outreach support for business, corporate, finance, real-estate, and home-improvement topics. Site relevance and quality indicators help guide prospect selection.</p>
+          <div class="fiverr-gig-tags">
+            <span>B2B</span><span>Finance</span><span>Real Estate</span><span>Home</span>
+          </div>
+          <ul class="fiverr-package-list">
+            <li><strong>Basic:</strong> 1 business guest post</li>
+            <li><strong>Standard:</strong> 3 business guest posts with dofollow options</li>
+            <li><strong>Premium:</strong> 5 business/finance outreach placements</li>
+          </ul>
+          <p class="fiverr-gig-note">Placement type and dofollow availability depend on the publisher's published policy and agreed terms.</p>
+        </article>
+
+        <article class="service-card fiverr-gig-card">
+          <div class="fiverr-gig-kicker">04 / Fashion & Lifestyle</div>
+          <h3>Fashion Guest Posts</h3>
+          <p>Guest-post outreach for fashion blogs and related lifestyle, beauty, and apparel topics, with an emphasis on niche fit and the audience each publisher serves.</p>
+          <div class="fiverr-gig-tags">
+            <span>Fashion</span><span>Beauty</span><span>Lifestyle</span>
+          </div>
+          <ul class="fiverr-package-list">
+            <li><strong>Focus:</strong> Fashion-relevant blogs and publications</li>
+            <li><strong>Link options:</strong> Dofollow where offered and permitted by the publisher</li>
+            <li><strong>Selection:</strong> Review site relevance and available authority/traffic metrics</li>
+          </ul>
+          <p class="fiverr-gig-note">Premium editorial and multi-niche outreach were also included in your notes; specific opportunities depend on campaign requirements and live publisher availability.</p>
+        </article>
+      </div>
+
+      <a class="fiverr-showcase-cta" href="https://www.fiverr.com/s/xrrPDj4" target="_blank" rel="noopener noreferrer">
+        <i class="fa-solid fa-arrow-up-right-from-square"></i> View My Fiverr Profile & Gig Options
+      </a>
+    </section>
+
     <!-- About Section -->
     <section id="about-me">
       <h2 class="section-title">
@@ -2620,8 +2793,8 @@
                 <iframe src="https://drive.google.com/file/d/12J8YXdrJmK1oJZZNjwIYX6SmLsZOVgQs/preview" title="Muhammad Jalal Din profile image" loading="lazy" allow="autoplay"></iframe>
               </div>
               <h3>Muhammad Jalal Din</h3>
-              <div class="profile-role">Owner & CEO, Avenqora Vortax<br>UGC Creator & Off-Page SEO Strategist</div>
-              <p>For SEO campaigns, publisher outreach, UGC projects, or professional collaboration, choose a platform to view the relevant profile details.</p>
+              <div class="profile-role">Owner & CEO, Avenqora Vortax<br>Blogger Outreach Specialist & Off-Page SEO Expert</div>
+              <p>Guest posting and blogger outreach are my primary services. UGC video content is an additional service. Choose a profile below to view the relevant details or contact me about a campaign.</p>
               <a class="contact-email" href="mailto:avenqoravortax@gmail.com"><i class="fa-solid fa-envelope"></i> Email Me</a>
             </aside>
 
@@ -2634,7 +2807,7 @@
               <div class="platform-book-stage" role="group" aria-label="Professional profile cards">
                 <button type="button" class="platform-page is-active" data-platform="fiverr" aria-controls="platform-detail" aria-pressed="true">
                   <span class="page-icon"><i class="fa-solid fa-bolt"></i></span>
-                  <span><strong>Fiverr</strong><small>SEO gigs & guest-post support</small></span>
+                  <span><strong>Fiverr</strong><small>Guest posts · Blogger outreach · Off-page SEO</small></span>
                 </button>
                 <button type="button" class="platform-page" data-platform="upwork" aria-controls="platform-detail" aria-pressed="false">
                   <span class="page-icon"><i class="fa-solid fa-briefcase"></i></span>
@@ -2651,8 +2824,8 @@
               </div>
 
               <div class="platform-detail-panel" id="platform-detail" role="status" aria-live="polite">
-                <h4 id="platform-detail-title">Fiverr — SEO & Guest Posting</h4>
-                <p id="platform-detail-description">Explore gig-based services for guest-post outreach, link-building support, publisher research, and related SEO tasks. Check the profile for current offerings and availability.</p>
+                <h4 id="platform-detail-title">Fiverr — Guest Posting & Blogger Outreach</h4>
+                <p id="platform-detail-description">Four niche-focused gig lines: Tech & SaaS; Health & Fitness; Business, Finance & Home Improvement; and Fashion Guest Posts. Packages vary by campaign. Review the gig details for current site options, delivery terms, and availability.</p>
                 <a class="platform-detail-link" id="platform-detail-link" href="https://www.fiverr.com/s/xrrPDj4" target="_blank" rel="noopener noreferrer">Visit Fiverr Profile <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
               </div>
             </div>
@@ -2689,10 +2862,10 @@
     // Click a layered platform page to reveal its individual profile details.
     const platformProfiles = {
       fiverr: {
-        title: "Fiverr — SEO & Guest Posting",
-        description: "Explore gig-based services for guest-post outreach, link-building support, publisher research, and related SEO tasks. Check the profile for current offerings and availability.",
+        title: "Fiverr — Guest Posting & Blogger Outreach",
+        description: "Four niche-focused gig lines: Tech & SaaS; Health & Fitness; Business, Finance & Home Improvement; and Fashion Guest Posts. Packages vary by campaign. Review the gig details for current site options, delivery terms, and availability.",
         url: "https://www.fiverr.com/s/xrrPDj4",
-        label: "Visit Fiverr Profile"
+        label: "View Fiverr Gigs"
       },
       upwork: {
         title: "Upwork — SEO Projects & B2B Campaigns",
