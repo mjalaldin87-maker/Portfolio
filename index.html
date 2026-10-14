@@ -729,6 +729,133 @@
     .upwork-profile-cta { display:inline-flex; align-items:center; justify-content:center; gap:0.6rem; margin:0.1rem 0 5rem; padding:0.82rem 1.2rem; border:1px solid rgba(212,175,55,0.82); border-radius:10px; background:linear-gradient(135deg,#f4d675 0%,#bd9228 100%); color:#11100b; text-decoration:none; text-align:center; font-size:0.85rem; font-weight:800; transition:filter 0.25s ease,transform 0.25s ease; }
     .upwork-profile-cta:hover { filter:brightness(1.08); transform:translateY(-1px); }
 
+    /* LinkedIn and Avenqora project sections */
+    .linkedin-profile-snapshot {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 0.85rem;
+      margin: 0 0 1.8rem;
+    }
+    .linkedin-snapshot-card {
+      padding: 1rem 1.05rem;
+      border: 1px solid rgba(212, 175, 55, 0.45);
+      border-radius: 14px;
+      background: linear-gradient(145deg, rgba(37, 32, 21, 0.92), rgba(18, 17, 13, 0.95));
+    }
+    .linkedin-snapshot-card span {
+      display: block;
+      color: #bfb49a;
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 1.05px;
+      text-transform: uppercase;
+      margin-bottom: 0.3rem;
+    }
+    .linkedin-snapshot-card strong {
+      color: #fff0bb;
+      font-size: 0.92rem;
+      line-height: 1.5;
+    }
+    .linkedin-detail-card h3,
+    .avenqora-project-card h3 {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .linkedin-detail-card h3 i,
+    .avenqora-project-card h3 i {
+      color: #e2bf58;
+      font-size: 0.95rem;
+    }
+    .linkedin-detail-card ul {
+      list-style: none;
+      display: grid;
+      gap: 0.56rem;
+      margin-top: 0.65rem;
+    }
+    .linkedin-detail-card li {
+      position: relative;
+      padding-left: 1.05rem;
+      color: #c9c0ae;
+      font-size: 0.84rem;
+      line-height: 1.65;
+    }
+    .linkedin-detail-card li::before {
+      content: "✦";
+      position: absolute;
+      left: 0;
+      top: 0.03rem;
+      color: #e2bf58;
+      font-size: 0.7rem;
+    }
+    .linkedin-disclaimer {
+      color: #b5aa92 !important;
+      font-size: 0.76rem !important;
+      line-height: 1.65 !important;
+      margin-top: 0.6rem;
+    }
+    .linkedin-credential {
+      color: #e6c65e !important;
+      font-size: 0.78rem !important;
+      margin-top: 0.25rem;
+    }
+    .linkedin-card-divider {
+      height: 1px;
+      margin: 1rem 0;
+      background: rgba(212, 175, 55, 0.24);
+    }
+    .linkedin-profile-cta,
+    .avenqora-contact-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.55rem;
+      margin: 0.1rem 0 4.6rem;
+      padding: 0.82rem 1.2rem;
+      border: 1px solid rgba(212, 175, 55, 0.82);
+      border-radius: 10px;
+      background: linear-gradient(135deg, #f4d675 0%, #bd9228 100%);
+      color: #11100b;
+      text-decoration: none;
+      text-align: center;
+      font-size: 0.85rem;
+      font-weight: 800;
+      transition: filter 0.25s ease, transform 0.25s ease;
+    }
+    .linkedin-profile-cta:hover,
+    .avenqora-contact-link:hover {
+      filter: brightness(1.08);
+      transform: translateY(-1px);
+    }
+    .avenqora-project-grid { margin-bottom: 1.5rem; }
+    .avenqora-project-card { display: flex; flex-direction: column; min-width: 0; }
+    .avenqora-project-card p { flex: 1; }
+    .avenqora-text-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      margin-top: 0.8rem;
+      color: #e2bf58;
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-decoration: none;
+    }
+    .avenqora-text-link:hover { color: #fff1bd; }
+    .avenqora-project-footer {
+      padding: 1.2rem 1.35rem;
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      border-radius: 14px;
+      background: rgba(212, 175, 55, 0.045);
+      margin-bottom: 1.2rem;
+    }
+    .avenqora-project-footer p {
+      color: #d0c6ae;
+      font-size: 0.88rem;
+      line-height: 1.75;
+      margin-bottom: 0.8rem;
+    }
+    .avenqora-contact-link { margin-bottom: 0; }
+
     /* About */
     .about-detail {
       display: grid;
@@ -1767,11 +1894,11 @@
       </div>
       <div class="hero-text">
         <h1>Muhammad Jalal Din</h1>
-        <div class="subtitle" data-en="Owner & CEO, Avenqora Vortax | UGC Creator & Off-Page SEO Strategist" data-no="Eier og administrerende direktør, Avenqora Vortax | UGC Skaper og SEO-strateg">
-          Owner & CEO, Avenqora Vortax | UGC Creator & Off-Page SEO Strategist
+        <div class="subtitle" data-en="Owner & CEO, Avenqora Vortax | Guest Posting & Off-Page SEO Specialist" data-no="Eier og administrerende direktør, Avenqora Vortax | Gjestepostering og SEO-spesialist">
+          Owner & CEO, Avenqora Vortax | Guest Posting & Off-Page SEO Specialist
         </div>
-        <p data-en="Pioneering modern link building, guest publishing campaigns, and high-converting short-form User Generated Content (UGC) across global tech, SaaS, lifestyle, and business niches." data-no="Pioner innen moderne lenkebygging, gjesteinnleggskampanjer og UGC-kortformsinnhold av høy kvalitet for globale teknologi-, SaaS- og bedriftsnisjer.">
-          Pioneering modern link building, guest publishing campaigns, and high-converting short-form User Generated Content (UGC) across global tech, SaaS, lifestyle, and business niches.
+        <p data-en="I help businesses with guest-post outreach, niche-relevant link-building research, and off-page SEO support. I also create short-form UGC-style content through Jordan Maison for fashion, grooming, and lifestyle concepts." data-no="Jeg hjelper bedrifter med gjestepostering, nisjerelevant lenkebygging og off-page SEO. Jeg lager også korte UGC-lignende videoer gjennom Jordan Maison for mote, grooming og livsstil.">
+          I help businesses with guest-post outreach, niche-relevant link-building research, and off-page SEO support. I also create short-form UGC-style content through Jordan Maison for fashion, grooming, and lifestyle concepts.
         </p>
         <div class="cta-buttons">
           <a href="https://avenqoravortax.com" target="_blank" class="btn btn-primary">
@@ -2807,6 +2934,135 @@
       <a class="upwork-profile-cta" href="https://upwork.com/freelancers/~mjalaldin" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> View My Upwork Profile</a>
     </section>
 
+    <!-- LinkedIn Professional Profile -->
+    <section id="linkedin-profile">
+      <h2 class="section-title">
+        <i class="fa-brands fa-linkedin"></i>
+        <span>LinkedIn Professional Profile</span>
+      </h2>
+      <p class="section-intro">Muhammad Jalal-din · Lahore, Punjab, Pakistan. SEO & Link Building Expert focused on high-authority guest posts, content outreach, and organic-growth support.</p>
+
+      <div class="linkedin-profile-snapshot">
+        <article class="linkedin-snapshot-card">
+          <span>Professional focus</span>
+          <strong>SEO & Link Building</strong>
+        </article>
+        <article class="linkedin-snapshot-card">
+          <span>Editorial outreach</span>
+          <strong>Guest Posts & Content Outreach</strong>
+        </article>
+        <article class="linkedin-snapshot-card">
+          <span>Creator identity</span>
+          <strong>Jordan Maison · UGC</strong>
+        </article>
+      </div>
+
+      <div class="services-grid">
+        <article class="service-card linkedin-detail-card">
+          <h3><i class="fa-solid fa-link"></i> SEO & Link-Building Expertise</h3>
+          <p>Professional focus includes high-authority guest-post opportunities, content outreach, and link-building support aimed at relevant websites and sustainable organic growth.</p>
+          <ul>
+            <li>Guest-post outreach and publisher relationship support</li>
+            <li>Niche-relevant link-building research</li>
+            <li>Off-page SEO and organic-growth support</li>
+            <li>Fashion, grooming, and lifestyle content concepts</li>
+          </ul>
+        </article>
+
+        <article class="service-card linkedin-detail-card">
+          <h3><i class="fa-solid fa-clapperboard"></i> Jordan Maison · UGC & Visual Storytelling</h3>
+          <p>Alongside SEO, Jordan Maison is the creator identity used for short-form UGC-style video concepts, particularly fashion, grooming, and lifestyle brand storytelling.</p>
+          <ul>
+            <li>Fashion styling recreations and menswear concepts</li>
+            <li>Precision-tailoring and visual-storytelling themes</li>
+            <li>Grooming and lifestyle brand concepts</li>
+          </ul>
+          <p class="linkedin-disclaimer">Fashion recreations described as brand-inspired concepts are independent creative work, not a claim of brand affiliation or endorsement.</p>
+        </article>
+
+        <article class="service-card linkedin-detail-card">
+          <h3><i class="fa-solid fa-graduation-cap"></i> Professional Training</h3>
+          <p><strong>Nextage.Solutions.private</strong></p>
+          <p>Professional Certificate Training program in Web Page, Digital/Multimedia and Information Resources Design.</p>
+          <p><strong>Listed dates:</strong> July 2026 – November 2026</p>
+          <p class="linkedin-disclaimer">The supplied LinkedIn data describes the program as focusing on strategic link building, content outreach, and high-authority editorial collaborations.</p>
+        </article>
+
+        <article class="service-card linkedin-detail-card">
+          <h3><i class="fa-solid fa-award"></i> LinkedIn Certifications</h3>
+          <p><strong>On-Page SEO and AI Search Essentials with Semrush</strong></p>
+          <p>Issued September 2026 · Expires September 2027</p>
+          <p class="linkedin-credential">Credential ID: 818486</p>
+          <div class="linkedin-card-divider"></div>
+          <p><strong>Local SEO Essentials with Semrush</strong></p>
+          <p>Issued September 2026 · Expires September 2027</p>
+          <p class="linkedin-credential">Credential ID: 818447</p>
+          <a href="#certs" class="about-cert-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> View the existing certification section</a>
+        </article>
+      </div>
+
+      <a class="linkedin-profile-cta" href="https://linkedin.com/in/mjalaldin" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-linkedin"></i> View LinkedIn Profile
+      </a>
+    </section>
+
+    <!-- Avenqora Vortax Website & Publication Project -->
+    <section id="avenqora-project">
+      <h2 class="section-title">
+        <i class="fa-solid fa-globe"></i>
+        <span>Avenqora Vortax — Website & Publication Project</span>
+      </h2>
+      <p class="section-intro">Avenqora Vortax is my technology publication and practical learning-hub project. Its site structure connects editorial guides with topic collections and a Student Hub, giving the publication a clear path for organizing current content and expanding future resources.</p>
+
+      <article class="website-sample-card">
+        <div class="website-sample-icon"><i class="fa-solid fa-book-open"></i></div>
+        <div class="website-sample-copy">
+          <div class="work-kicker">Owned Publication Project</div>
+          <h3>A global technology publication and practical learning hub</h3>
+          <p>The live project brings together source-aware technology and business content, cybersecurity guides, and structured lessons for students. Explore the actual website to see its navigation, editorial categories, and learning structure.</p>
+        </div>
+        <a class="website-sample-link" href="https://avenqoravortax.com" target="_blank" rel="noopener noreferrer">Explore Live Site <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+      </article>
+
+      <div class="services-grid avenqora-project-grid">
+        <article class="service-card avenqora-project-card">
+          <h3><i class="fa-solid fa-microchip"></i> Tech & SaaS</h3>
+          <p>Articles cover software, SaaS, cloud computing, APIs, AI assistants, data, product analytics, onboarding, and digital operations.</p>
+          <a class="avenqora-text-link" href="https://avenqoravortax.com/tech-saas.html" target="_blank" rel="noopener noreferrer">Explore Tech & SaaS <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </article>
+        <article class="service-card avenqora-project-card">
+          <h3><i class="fa-solid fa-shield-halved"></i> Cybersecurity</h3>
+          <p>Practical security content includes phishing awareness, account protection, network security, zero trust, data security, and incident response.</p>
+          <a class="avenqora-text-link" href="https://avenqoravortax.com/cybersecurity.html" target="_blank" rel="noopener noreferrer">Explore Cybersecurity <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </article>
+        <article class="service-card avenqora-project-card">
+          <h3><i class="fa-solid fa-chart-line"></i> B2B Solutions</h3>
+          <p>Business guides cover customer relationships, CRM, automation, digital transformation, vendor management, project delivery, and performance metrics.</p>
+          <a class="avenqora-text-link" href="https://avenqoravortax.com/b2b.html" target="_blank" rel="noopener noreferrer">Explore B2B Solutions <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </article>
+        <article class="service-card avenqora-project-card">
+          <h3><i class="fa-solid fa-book-open-reader"></i> Student Hub</h3>
+          <p>A growing learning space organized into Technology, Cybersecurity, Business, and Digital Skills, with step-by-step lessons and practical foundational topics.</p>
+          <a class="avenqora-text-link" href="https://avenqoravortax.com/student-hub.html" target="_blank" rel="noopener noreferrer">Explore Student Hub <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </article>
+        <article class="service-card avenqora-project-card">
+          <h3><i class="fa-solid fa-magnifying-glass"></i> Content Discovery</h3>
+          <p>Topic collections, related reading paths, on-site search, and a sitemap help visitors navigate the publication's growing library.</p>
+          <a class="avenqora-text-link" href="https://avenqoravortax.com/search.html" target="_blank" rel="noopener noreferrer">Open Site Search <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </article>
+        <article class="service-card avenqora-project-card">
+          <h3><i class="fa-solid fa-clipboard-check"></i> Editorial Standards</h3>
+          <p>The published editorial policy describes expectations for accuracy, research and sources, originality, corrections, attribution, responsible AI use, and commercial-content transparency.</p>
+          <a class="avenqora-text-link" href="https://avenqoravortax.com/editorial-policy.html" target="_blank" rel="noopener noreferrer">Read Editorial Policy <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </article>
+      </div>
+
+      <div class="avenqora-project-footer">
+        <p>Project emphasis: content architecture, clear topic taxonomy, practical learning pathways, and an editorial framework designed to support responsible publication growth.</p>
+        <a class="avenqora-contact-link" href="https://avenqoravortax.com/contact.html" target="_blank" rel="noopener noreferrer">Visit Publication Contact Page <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+      </div>
+    </section>
+
     <!-- About Section -->
     <section id="about-me">
       <h2 class="section-title">
@@ -2937,11 +3193,11 @@
                 </button>
                 <button type="button" class="platform-page" data-platform="linkedin" aria-controls="platform-detail" aria-pressed="false">
                   <span class="page-icon"><i class="fa-brands fa-linkedin-in"></i></span>
-                  <span><strong>LinkedIn</strong><small>Professional connections</small></span>
+                  <span><strong>LinkedIn</strong><small>SEO · Guest posts · Jordan Maison</small></span>
                 </button>
                 <button type="button" class="platform-page" data-platform="avenqora" aria-controls="platform-detail" aria-pressed="false">
                   <span class="page-icon"><i class="fa-solid fa-globe"></i></span>
-                  <span><strong>Avenqora Vortax</strong><small>Website & publication project</small></span>
+                  <span><strong>Avenqora Vortax</strong><small>Tech · Cybersecurity · B2B · Student Hub</small></span>
                 </button>
               </div>
 
@@ -2996,16 +3252,16 @@
         label: "View Upwork Profile"
       },
       linkedin: {
-        title: "LinkedIn — Professional Networking",
-        description: "Connect professionally to discuss SEO, digital publishing, outreach collaboration, content projects, and business opportunities.",
+        title: "LinkedIn — SEO, Link Building & UGC",
+        description: "Headline: SEO & Link Building Expert | High Authority Guest Posts & Content Outreach | Driving Organic Growth. Profile location: Lahore, Punjab, Pakistan. The dedicated LinkedIn section also summarizes your Jordan Maison UGC identity, listed professional training, and two Semrush credential IDs.",
         url: "https://linkedin.com/in/mjalaldin",
-        label: "Connect on LinkedIn"
+        label: "View LinkedIn Profile"
       },
       avenqora: {
-        title: "Avenqora Vortax — Website & Publication",
-        description: "Visit the digital publication project associated with this portfolio to explore its technology content, publishing direction, and brand presentation.",
+        title: "Avenqora Vortax — Publication & Learning Hub",
+        description: "Explore the live publication project across Tech & SaaS, Cybersecurity, B2B Solutions, and a four-area Student Hub. The dedicated project section also links to the site's search page, editorial policy, and category collections.",
         url: "https://avenqoravortax.com",
-        label: "Visit Avenqora Vortax"
+        label: "Explore Avenqora Vortax"
       }
     };
 
