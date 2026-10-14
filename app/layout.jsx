@@ -1,6 +1,7 @@
 import "./globals.css";
 import "./legacy-home.css";
 import "./theme.css";
+import "./ugc.css";
 
 export const metadata = {
   title: "Muhammad Jalal Din | Guest Posting, SEO & UGC",
