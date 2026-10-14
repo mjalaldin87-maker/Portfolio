@@ -1549,6 +1549,20 @@
       }
     }
 
+    /* UGC category jump navigation and grouped video sections */
+    .ugc-category-nav{margin:0 0 1.7rem;padding:1.1rem 1.15rem 1.2rem;border:1px solid rgba(224,191,104,.48);border-radius:16px;background:linear-gradient(145deg,rgba(53,47,35,.78),rgba(38,35,27,.84));box-shadow:0 10px 24px rgba(0,0,0,.13)}
+    .ugc-category-nav-label{margin:0 0 .85rem;color:#f5e4b5;font-size:.84rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase}
+    .ugc-category-nav-links{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem}
+    .ugc-category-link{display:inline-flex;align-items:center;justify-content:center;min-height:41px;padding:.62rem .92rem;border:1px solid rgba(219,190,120,.4);border-radius:999px;color:#e5dcc8;background:rgba(12,11,8,.24);text-decoration:none;font-size:.82rem;font-weight:750;line-height:1.35;transition:color .2s ease,background .2s ease,border-color .2s ease,transform .2s ease}
+    .ugc-category-link:hover,.ugc-category-link:focus-visible{border-color:rgba(241,212,119,.88);color:#fff4d3;background:rgba(212,175,55,.1);transform:translateY(-1px)}
+    .ugc-category-link:focus-visible{outline:3px solid #f7d977;outline-offset:3px}
+    .media-grid{display:flex;flex-direction:column;gap:2rem}
+    .ugc-category-section{min-width:0;scroll-margin-top:120px}
+    .ugc-category-heading{display:flex;align-items:center;gap:.75rem;margin:0 0 1.05rem;padding:0 0 .85rem;border-bottom:1px solid rgba(224,191,104,.32);color:#f7edda;font-size:clamp(1.22rem,2.2vw,1.65rem);font-weight:850;line-height:1.35;letter-spacing:-.02em}
+    .ugc-category-heading i{color:#e2bf68;font-size:1.05em}
+    .ugc-category-video-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:1.55rem}
+    @media(max-width:600px){.ugc-category-nav{padding:.9rem}.ugc-category-nav-links{gap:.5rem}.ugc-category-link{min-height:39px;padding:.58rem .75rem;font-size:.77rem}.ugc-category-video-grid{grid-template-columns:minmax(0,1fr);gap:1.2rem}}
+
 </style>
 </head>
 <body>
@@ -1618,6 +1632,22 @@
       </article>
       <p class="section-intro">Selected short-form UGC samples are shown below.</p>
 
+
+      <nav class="ugc-category-nav" id="ugc-category-nav" aria-label="Jump to UGC video category">
+        <p class="ugc-category-nav-label" data-en="Explore by category" data-no="Utforsk etter kategori">Explore by category</p>
+        <div class="ugc-category-nav-links">
+          <a class="ugc-category-link" href="#work" data-en="All Samples" data-no="Alle eksempler">All Samples</a>
+          <a class="ugc-category-link" href="#ugc-category-beauty" data-en="Beauty &amp; Skincare" data-no="Skjønnhet og hudpleie">Beauty &amp; Skincare</a>
+          <a class="ugc-category-link" href="#ugc-category-fashion" data-en="Fashion &amp; Clothing" data-no="Mote og klær">Fashion &amp; Clothing</a>
+          <a class="ugc-category-link" href="#ugc-category-accessories" data-en="Jewelry &amp; Watches" data-no="Smykker og klokker">Jewelry &amp; Watches</a>
+          <a class="ugc-category-link" href="#ugc-category-food" data-en="Food &amp; Snacks" data-no="Mat og snacks">Food &amp; Snacks</a>
+          <a class="ugc-category-link" href="#ugc-category-lifestyle" data-en="Lifestyle &amp; Travel" data-no="Livsstil og reise">Lifestyle &amp; Travel</a>
+          <a class="ugc-category-link" href="#ugc-category-sportswear" data-en="Sportswear" data-no="Sportsklær og sko">Sportswear</a>
+          <a class="ugc-category-link" href="#ugc-category-tech" data-en="Tech &amp; Home" data-no="Teknologi og hjem">Tech &amp; Home</a>
+          <a class="ugc-category-link" href="#ugc-category-business" data-en="Business &amp; Digital" data-no="Forretning og digitalt">Business &amp; Digital</a>
+          <a class="ugc-category-link" href="#ugc-category-other" data-en="Other" data-no="Annet">Other</a>
+        </div>
+      </nav>
       <div class="media-grid">
 
         
@@ -2697,6 +2727,77 @@
       }
     }
 
-</script>
+
+    
+    // Group current and future UGC cards using their title/topic/niche metadata.
+    (function initUgcCategorySections() {
+      const grid=document.querySelector(".media-grid"), nav=document.getElementById("ugc-category-nav");
+      if(!grid||!nav||grid.dataset.categoriesInitialized==="true")return;
+      const categories=[
+        {key:"beauty",en:"Beauty & Skincare",no:"Skjønnhet og hudpleie",icon:"fa-sparkles"},
+        {key:"fashion",en:"Fashion & Clothing",no:"Mote og klær",icon:"fa-shirt"},
+        {key:"accessories",en:"Jewelry & Watches",no:"Smykker og klokker",icon:"fa-gem"},
+        {key:"food",en:"Food & Snacks",no:"Mat og snacks",icon:"fa-utensils"},
+        {key:"lifestyle",en:"Lifestyle & Travel",no:"Livsstil og reise",icon:"fa-mountain-sun"},
+        {key:"sportswear",en:"Sportswear",no:"Sportsklær og sko",icon:"fa-person-running"},
+        {key:"tech",en:"Tech & Home",no:"Teknologi og hjem",icon:"fa-headphones"},
+        {key:"business",en:"Business & Digital",no:"Forretning og digitalt",icon:"fa-laptop-code"},
+        {key:"other",en:"Other",no:"Annet",icon:"fa-layer-group"}
+      ];
+      function cardText(card){
+        const parts=[],title=card.querySelector("h3"),frame=card.querySelector("iframe[title]");
+        if(title)parts.push(title.getAttribute("data-en")||title.textContent||"");
+        if(frame)parts.push(frame.getAttribute("title")||"");
+        Array.from(card.querySelectorAll(".ugc-detail-box")).slice(0,2).forEach(box=>{
+          const p=box.querySelector("p");if(p)parts.push(p.getAttribute("data-en")||p.textContent||"");
+        });
+        return parts.join(" ").toLowerCase().replace(/&amp;/g,"&").replace(/\s+/g," ");
+      }
+      function categorize(card){
+        const custom=(card.dataset.ugcCategory||"").trim().toLowerCase();
+        if(categories.some(c=>c.key===custom))return custom;
+        const t=cardText(card);
+        if(/jewelry|jewellery|necklace|pendant|earring|watch|timepiece/.test(t))return "accessories";
+        if(/fragrance|perfume|grooming|skincare|skin care|sunscreen|face wash|facial cleansing|body lotion|body care|lip tint|lipstick|mascara|makeup|beauty/.test(t))return "beauty";
+        if(/kurkure|snack|chocolate|biscuit|bakery|noodle|food|confectionery|fmcg/.test(t))return "food";
+        if(/running shoe|athletic footwear|sportswear|sneaker|sport shoe/.test(t))return "sportswear";
+        if(/travel|tourism|scenic|landscape|urban lifestyle|luxury lifestyle/.test(t))return "lifestyle";
+        if(/fashion|apparel|clothing|dress|eveningwear|evening gown|formalwear|street style|tailoring|runway|red carpet/.test(t))return "fashion";
+        if(/earbud|headphone|technology|tech & gadgets|led desk lamp|home & lifestyle|home decor|desk lamp/.test(t))return "tech";
+        if(/website|user experience|\bux\b|web design|ui\/ux|guest posting|\bseo\b|link building|\bb2b\b|digital marketing|agency services|personal branding|creator introduction|content production/.test(t))return "business";
+        return "other";
+      }
+      const allCards=Array.from(grid.querySelectorAll(":scope > .video-card"));
+      if(!allCards.length)return;
+      const groups=new Map(categories.map(c=>[c.key,[]]));
+      allCards.forEach(card=>{const key=categorize(card);(groups.get(key)||groups.get("other")).push(card)});
+      const fragment=document.createDocumentFragment();
+      categories.forEach(category=>{
+        const group=groups.get(category.key);if(!group||!group.length)return;
+        const section=document.createElement("section");
+        section.className="ugc-category-section";section.id="ugc-category-"+category.key;
+        section.setAttribute("aria-labelledby",section.id+"-heading");
+        const heading=document.createElement("h3");
+        heading.className="ugc-category-heading";heading.id=section.id+"-heading";
+        heading.dataset.categoryHeading=category.key;
+        const icon=document.createElement("i");icon.className="fa-solid "+category.icon;icon.setAttribute("aria-hidden","true");
+        const label=document.createElement("span");
+        label.textContent=(typeof currentLang!=="undefined"&&currentLang==="NO")?category.no:category.en;
+        heading.append(icon,label);section.appendChild(heading);
+        const inner=document.createElement("div");inner.className="ugc-category-video-grid";
+        group.forEach(card=>inner.appendChild(card));section.appendChild(inner);fragment.appendChild(section);
+      });
+      grid.replaceChildren(fragment);grid.dataset.categoriesInitialized="true";
+      const langButton=document.getElementById("langToggle");
+      if(langButton)langButton.addEventListener("click",()=>{
+        const norwegian=typeof currentLang!=="undefined"&&currentLang==="NO";
+        categories.forEach(category=>{
+          const label=document.querySelector('[data-category-heading="'+category.key+'"] span');
+          if(label)label.textContent=norwegian?category.no:category.en;
+        });
+      });
+    })();
+
+  </script>
 </body>
 </html>
