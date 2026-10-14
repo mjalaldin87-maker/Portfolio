@@ -1281,6 +1281,44 @@
       }
     }
 
+  
+    /* Video-specific UGC metadata boxes — reusable for the remaining samples */
+    .ugc-details {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin: 16px 0 14px;
+      text-align: left;
+    }
+
+    .ugc-detail-box {
+      min-width: 0;
+      padding: 12px 13px;
+      border: 1px solid rgba(201, 166, 107, 0.38);
+      border-left: 3px solid #c9a66b;
+      border-radius: 10px;
+      background: linear-gradient(135deg, rgba(201, 166, 107, 0.09), rgba(255, 255, 255, 0.025));
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.025);
+    }
+
+    .ugc-detail-box h4 {
+      margin: 0 0 6px;
+      color: #d8b779;
+      font-size: 0.72rem;
+      font-weight: 750;
+      letter-spacing: 0.11em;
+      line-height: 1.4;
+      text-transform: uppercase;
+    }
+
+    .media-grid .ugc-detail-box p {
+      margin: 0;
+      color: #e0d8c9;
+      font-size: 0.88rem;
+      line-height: 1.65;
+      overflow-wrap: anywhere;
+    }
+
   </style>
 </head>
 <body>
@@ -1351,13 +1389,28 @@
       <p class="section-intro">Selected short-form UGC samples are shown below. Each video is embedded from its existing Google Drive preview link.</p>
       <div class="media-grid">
 
+        
         <div class="video-card">
           <div class="video-wrapper">
-            <iframe src="https://drive.google.com/file/d/1FxuZwPaiMOLO_zZDsoYfvGKdLyy-wzeP/preview" title="Brand Showcase Video 1" allow="autoplay; encrypted-media; picture-in-picture" loading="lazy"></iframe>
+            <iframe src="https://drive.google.com/file/d/1FxuZwPaiMOLO_zZDsoYfvGKdLyy-wzeP/preview" title="Luxury Fragrance Review UGC — Video 1" allow="autoplay; encrypted-media; picture-in-picture" loading="lazy"></iframe>
           </div>
           <div class="card-info">
-            <h3 data-en="Brand Showcase Video 1" data-no="Merkevarevideo 1">Brand Showcase Video 1</h3>
+            <h3 data-en="Luxury Fragrance Review UGC 1" data-no="UGC-anmeldelse av luksusparfyme 1">Luxury Fragrance Review UGC 1</h3>
             <p>JordanMaison.Official</p>
+            <div class="ugc-details">
+              <div class="ugc-detail-box">
+                <h4 data-en="Description" data-no="Beskrivelse">Description</h4>
+                <p data-en="A confident, short-form men’s fragrance review filmed in a clean, minimalist bedroom setting. Wearing a black button-down shirt, the creator uncaps a perfume bottle, sprays the fragrance onto his wrist, and checks the scent. He then looks into the camera, presents the bottle clearly, and delivers a natural recommendation: “Amazing. It feels fresh, smooth, and sophisticated. Definitely worth trying.”" data-no="En selvsikker, kort UGC-anmeldelse av en herreduft, filmet i et rent og minimalistisk soverom. Iført en svart skjorte med knapper tar innholdsskaperen korken av parfymeflasken, sprayer duften på håndleddet og lukter på den. Deretter ser han inn i kameraet, viser flasken tydelig og gir en naturlig anbefaling: “Amazing. It feels fresh, smooth, and sophisticated. Definitely worth trying.”">A confident, short-form men’s fragrance review filmed in a clean, minimalist bedroom setting. Wearing a black button-down shirt, the creator uncaps a perfume bottle, sprays the fragrance onto his wrist, and checks the scent. He then looks into the camera, presents the bottle clearly, and delivers a natural recommendation: “Amazing. It feels fresh, smooth, and sophisticated. Definitely worth trying.”</p>
+              </div>
+              <div class="ugc-detail-box">
+                <h4 data-en="Topic" data-no="Tema">Topic</h4>
+                <p data-en="Luxury Fragrance · Men’s Grooming · Product Review UGC" data-no="Luksusparfyme · Herrepleie · UGC-produktanmeldelse">Luxury Fragrance · Men’s Grooming · Product Review UGC</p>
+              </div>
+              <div class="ugc-detail-box">
+                <h4 data-en="Short Description" data-no="Kort beskrivelse">Short Description</h4>
+                <p data-en="A polished perfume UGC sample featuring a wrist-spray demonstration, a clear product close-up, and a confident, positive scent review." data-no="Et gjennomført UGC-eksempel for parfyme med spraying på håndleddet, tydelig nærbilde av produktet og en selvsikker, positiv duftanmeldelse.">A polished perfume UGC sample featuring a wrist-spray demonstration, a clear product close-up, and a confident, positive scent review.</p>
+              </div>
+            </div>
             <a class="video-open-link" href="https://drive.google.com/file/d/1FxuZwPaiMOLO_zZDsoYfvGKdLyy-wzeP/view?usp=sharing" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open directly in Google Drive</a>
           </div>
         </div>
