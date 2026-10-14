@@ -2,6 +2,14 @@
 
 import Link from "next/link";
 
+const siteSectionTabs = [
+  { label: "Home", href: "/#home" },
+  { label: "Work", href: "/#work" },
+  { label: "Services", href: "/#services" },
+  { label: "About", href: "/#about-me" },
+  { label: "Contact", href: "/#contact" }
+];
+
 const routeNames = [
   { slug: "fiverr", label: "Fiverr" },
   { slug: "upwork", label: "Upwork" },
@@ -144,7 +152,12 @@ export default function ProfileView({ slug }) {
   return (
     <main className="profile-page">
       <div className="profile-page-inner">
-        <nav className="portfolio-profile-tabs profile-page-tabs" aria-label="Profile and project pages">
+        <nav className="portfolio-profile-tabs profile-page-tabs" aria-label="Main site and profile pages">
+          {siteSectionTabs.map((item) => (
+            <Link key={item.label} className="profile-section-tab" href={item.href}>
+              {item.label}
+            </Link>
+          ))}
           {routeNames.map((item) => (
             <Link
               key={item.slug}
@@ -202,9 +215,7 @@ export default function ProfileView({ slug }) {
           <Link className="profile-cta profile-cta-secondary" href="/"><i className="fa-solid fa-house" aria-hidden="true" /> Return to Portfolio Home</Link>
         </div>
 
-        <nav className="profile-other-links" aria-label="Other profile pages">
-          {routeNames.map((item) => <Link key={item.slug} href={"/" + item.slug} aria-current={item.slug === slug ? "page" : undefined}>{item.label}</Link>)}
-        </nav>
+
       </div>
     </main>
   );
