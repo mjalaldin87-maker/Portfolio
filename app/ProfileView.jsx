@@ -144,6 +144,18 @@ export default function ProfileView({ slug }) {
   return (
     <main className="profile-page">
       <div className="profile-page-inner">
+        <nav className="portfolio-profile-tabs profile-page-tabs" aria-label="Profile and project pages">
+          {routeNames.map((item) => (
+            <Link
+              key={item.slug}
+              className="portfolio-profile-tab"
+              href={"/" + item.slug}
+              aria-current={item.slug === slug ? "page" : undefined}
+            >
+              {item.label}
+            </Link>
+          ))}
+        </nav>
         <header className="profile-topbar">
           <Link className="profile-brand" href="/">AVENQORA VORTAX<small>Professional Portfolio</small></Link>
           <Link className="profile-back" href="/"><i className="fa-solid fa-arrow-left" aria-hidden="true" /> Back to Portfolio</Link>
