@@ -690,6 +690,28 @@
       transform: translateY(-1px);
     }
 
+    /* Fiverr activity metric cells */
+    .fiverr-profile-overview { margin-bottom: 2.6rem; }
+    .fiverr-gig-metrics {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.55rem;
+      margin-top: 1rem;
+      padding-top: 0.85rem;
+      border-top: 1px solid rgba(212, 175, 55, 0.26);
+    }
+    .fiverr-gig-metric {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+      padding: 0.58rem 0.65rem;
+      border: 1px solid rgba(212, 175, 55, 0.23);
+      border-radius: 9px;
+      background: rgba(212, 175, 55, 0.045);
+    }
+    .fiverr-gig-metric span { color: #bfb49a; font-size: 0.68rem; line-height: 1.35; }
+    .fiverr-gig-metric strong { color: #fff0bb; font-size: 1rem; font-weight: 800; }
+
     /* Upwork professional profile */
     .upwork-snapshot-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(165px,1fr)); gap:0.85rem; margin:0 0 1.8rem; }
     .upwork-snapshot { padding:1rem 1.05rem; border:1px solid rgba(212,175,55,0.45); border-radius:14px; background:linear-gradient(145deg,rgba(37,32,21,0.92),rgba(18,17,13,0.95)); }
@@ -2630,55 +2652,92 @@
     <!-- Fiverr Guest Posting Showcase -->
     <section id="fiverr-gigs">
       <h2 class="section-title">
-        <i class="fa-solid fa-newspaper"></i>
-        <span data-en="Fiverr Guest Posting Gigs" data-no="Fiverr-gjestepostingstjenester">Fiverr Guest Posting Gigs</span>
+        <i class="fa-brands fa-square-check"></i>
+        <span data-en="Fiverr Profile & Active Gigs" data-no="Fiverr-profil og aktive tjenester">Fiverr Profile & Active Gigs</span>
       </h2>
-      <p class="section-intro">My Fiverr services focus on niche-relevant guest-post opportunities and blogger outreach. Publisher fit, available site metrics, link attributes, and delivery terms are checked against the campaign brief before an order is finalized.</p>
+      <p class="section-intro">My primary service is Off-Page SEO, guest posting, and link building. I support websites with manual outreach, niche-relevant guest posts, link insertion opportunities, and backlink research focused on relevance and long-term SEO value.</p>
+
+      <div class="about-detail fiverr-profile-overview">
+        <article class="about-copy">
+          <div class="work-kicker">Fiverr Profile</div>
+          <h3>Muhammad Jalal</h3>
+          <p><strong>I Will Build High Quality Backlinks to Improve Your Website SEO</strong></p>
+          <p>I am an SEO specialist specializing in Off-Page SEO, Guest Posting, and Link Building. I help websites work toward improved search visibility and authority through manual outreach, relevant backlink opportunities, and niche-relevant guest posts, with a focus on genuine value and long-term SEO support.</p>
+          <p><strong>Freelance experience:</strong> SEO & Link Building Expert · Self-employed · June 2026 – Present.</p>
+        </article>
+        <aside class="about-highlights">
+          <h3>Profile Skills & Background</h3>
+          <ul>
+            <li><i class="fa-solid fa-check-circle"></i><span>Guest Posting — Intermediate</span></li>
+            <li><i class="fa-solid fa-check-circle"></i><span>Link Building — Intermediate</span></li>
+            <li><i class="fa-solid fa-check-circle"></i><span>Off-Page SEO — Intermediate</span></li>
+            <li><i class="fa-solid fa-check-circle"></i><span>Google SEO, Backlinks & Backlink Analysis — Intermediate</span></li>
+            <li><i class="fa-solid fa-check-circle"></i><span>Education: Board of Intermediate and Secondary Education Lahore — Arts</span></li>
+          </ul>
+          <a href="#certs" class="about-cert-link"><i class="fa-solid fa-award"></i> View Certifications Already Listed</a>
+        </aside>
+      </div>
+
+      <h3 class="work-kicker" style="margin:0 0 1rem;">Active Gig Snapshot · Last 30 Days</h3>
+      <p class="fiverr-gig-note" style="margin:0 0 1.5rem;">Metrics below are the figures you supplied from Fiverr. They describe the last 30 days at the time they were recorded, not lifetime totals or guaranteed future results.</p>
 
       <div class="services-grid fiverr-gigs-grid">
         <article class="service-card fiverr-gig-card">
           <div class="fiverr-gig-kicker">01 / Technology & SaaS</div>
-          <h3>Tech & SaaS Guest Posts</h3>
-          <p>Guest-post placements for technology, software, SaaS, and AI brands, with attention to topic relevance, organic-traffic signals, and the publisher’s quality.</p>
-          <div class="fiverr-gig-tags">
-            <span>Technology</span><span>Software</span><span>SaaS</span><span>AI</span>
+          <h3>High-DA Technology Guest Posts with SaaS Backlinks</h3>
+          <p>Guest-post and backlink support for technology and SaaS link-building campaigns.</p>
+          <div class="fiverr-gig-tags"><span>Technology</span><span>SaaS</span><span>Tech Link Building</span></div>
+          <div class="fiverr-gig-metrics">
+            <div class="fiverr-gig-metric"><span>Impressions</span><strong>205</strong></div>
+            <div class="fiverr-gig-metric"><span>Clicks</span><strong>2</strong></div>
+            <div class="fiverr-gig-metric"><span>Orders</span><strong>1</strong></div>
+            <div class="fiverr-gig-metric"><span>Cancellations</span><strong>0%</strong></div>
           </div>
-          <p class="fiverr-gig-note">Your supplied notes mention high-DA targets and indexing terms. Check the live Fiverr gig for its current packages, site metrics, link attributes, delivery terms, and any indexing conditions.</p>
         </article>
 
         <article class="service-card fiverr-gig-card">
           <div class="fiverr-gig-kicker">02 / Health & Fitness</div>
-          <h3>Health & Fitness Guest Posts</h3>
-          <p>Niche-focused outreach for health, fitness, and medical-related campaigns, prioritizing subject relevance and suitable publisher audiences.</p>
-          <div class="fiverr-gig-tags">
-            <span>Health</span><span>Fitness</span><span>Medical</span>
+          <h3>Health & Fitness Guest Posts with Medical Backlinks</h3>
+          <p>Niche-specific guest-post outreach for health, fitness, and medical-related campaigns.</p>
+          <div class="fiverr-gig-tags"><span>Health</span><span>Fitness</span><span>Medical</span></div>
+          <div class="fiverr-gig-metrics">
+            <div class="fiverr-gig-metric"><span>Impressions</span><strong>67</strong></div>
+            <div class="fiverr-gig-metric"><span>Clicks</span><strong>1</strong></div>
+            <div class="fiverr-gig-metric"><span>Orders</span><strong>0</strong></div>
+            <div class="fiverr-gig-metric"><span>Cancellations</span><strong>0%</strong></div>
           </div>
-          <p class="fiverr-gig-note">Review the live Fiverr gig for the exact package options, available publisher list, delivery terms, and placement conditions.</p>
         </article>
 
         <article class="service-card fiverr-gig-card">
           <div class="fiverr-gig-kicker">03 / Business & Finance</div>
-          <h3>Business, Finance & Home Improvement</h3>
-          <p>Outreach support for business, corporate, finance, real-estate, and home-improvement topics. Site relevance and quality indicators help guide prospect selection.</p>
-          <div class="fiverr-gig-tags">
-            <span>B2B</span><span>Finance</span><span>Real Estate</span><span>Home</span>
+          <h3>Business, Finance & Home Improvement Guest Posts</h3>
+          <p>Guest-post opportunities for business, finance, and home-improvement campaigns.</p>
+          <div class="fiverr-gig-tags"><span>Business</span><span>Finance</span><span>Home Improvement</span></div>
+          <div class="fiverr-gig-metrics">
+            <div class="fiverr-gig-metric"><span>Impressions</span><strong>34</strong></div>
+            <div class="fiverr-gig-metric"><span>Clicks</span><strong>0</strong></div>
+            <div class="fiverr-gig-metric"><span>Orders</span><strong>0</strong></div>
+            <div class="fiverr-gig-metric"><span>Cancellations</span><strong>0%</strong></div>
           </div>
-          <p class="fiverr-gig-note">Your notes include business/finance guest posting, but the gig details should be checked directly for current package quantities, placement types, and publisher terms.</p>
         </article>
 
         <article class="service-card fiverr-gig-card">
-          <div class="fiverr-gig-kicker">04 / Fashion & Lifestyle</div>
-          <h3>Fashion Guest Posts</h3>
-          <p>Guest-post outreach for fashion blogs and related lifestyle, beauty, and apparel topics, with an emphasis on niche fit and the audience each publisher serves.</p>
-          <div class="fiverr-gig-tags">
-            <span>Fashion</span><span>Beauty</span><span>Lifestyle</span>
+          <div class="fiverr-gig-kicker">04 / Fashion, Beauty & Lifestyle</div>
+          <h3>Fashion Guest Posts on High-DA Fashion Blogs</h3>
+          <p>Fashion guest-post outreach, with the related gig listing also covering beauty, travel, and lifestyle sites.</p>
+          <div class="fiverr-gig-tags"><span>Fashion</span><span>Beauty</span><span>Travel</span><span>Lifestyle</span></div>
+          <div class="fiverr-gig-metrics">
+            <div class="fiverr-gig-metric"><span>Impressions</span><strong>94</strong></div>
+            <div class="fiverr-gig-metric"><span>Clicks</span><strong>4</strong></div>
+            <div class="fiverr-gig-metric"><span>Orders</span><strong>0</strong></div>
+            <div class="fiverr-gig-metric"><span>Cancellations</span><strong>0%</strong></div>
           </div>
-          <p class="fiverr-gig-note">Your notes mention fashion blogs and dofollow backlinks. Check the live Fiverr gig for exact package options, available sites, and placement conditions. Premium editorial or multi-niche outreach should be discussed separately if needed.</p>
         </article>
       </div>
 
+      <p class="fiverr-gig-note">Your current gig packages and live availability should be checked on Fiverr. This portfolio does not invent package prices, quantities, or indexing guarantees.</p>
       <a class="fiverr-showcase-cta" href="https://www.fiverr.com/s/xrrPDj4" target="_blank" rel="noopener noreferrer">
-        <i class="fa-solid fa-arrow-up-right-from-square"></i> View My Fiverr Profile & Gig Options
+        <i class="fa-solid fa-arrow-up-right-from-square"></i> View My Fiverr Profile & Active Gigs
       </a>
     </section>
 
@@ -2925,10 +2984,10 @@
     // Click a layered platform page to reveal its individual profile details.
     const platformProfiles = {
       fiverr: {
-        title: "Fiverr — Guest Posting & Blogger Outreach",
-        description: "Four niche-focused gig lines: Tech & SaaS; Health & Fitness; Business, Finance & Home Improvement; and Fashion Guest Posts. Packages vary by campaign. Review the gig details for current site options, delivery terms, and availability.",
+        title: "Fiverr — Off-Page SEO & Guest Posting",
+        description: "Profile headline: I Will Build High Quality Backlinks to Improve Your Website SEO. The four active gig niches are Technology/SaaS, Health/Fitness, Business/Finance/Home Improvement, and Fashion (with related Beauty/Travel/Lifestyle listing details). The Fiverr section shows the last-30-days metrics supplied for each gig; view the live profile for current packages and options.",
         url: "https://www.fiverr.com/s/xrrPDj4",
-        label: "View Fiverr Gigs"
+        label: "View Fiverr Profile"
       },
       upwork: {
         title: "Upwork — SEO, Guest Posting & Manual Outreach",
