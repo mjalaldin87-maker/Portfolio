@@ -690,6 +690,23 @@
       transform: translateY(-1px);
     }
 
+    /* Upwork professional profile */
+    .upwork-snapshot-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(165px,1fr)); gap:0.85rem; margin:0 0 1.8rem; }
+    .upwork-snapshot { padding:1rem 1.05rem; border:1px solid rgba(212,175,55,0.45); border-radius:14px; background:linear-gradient(145deg,rgba(37,32,21,0.92),rgba(18,17,13,0.95)); }
+    .upwork-snapshot-label { color:#bfb49a; font-size:0.68rem; font-weight:800; letter-spacing:1.1px; text-transform:uppercase; margin-bottom:0.3rem; }
+    .upwork-snapshot-value { color:#fff0bb; font-size:1.02rem; font-weight:800; line-height:1.45; overflow-wrap:anywhere; }
+    .upwork-detail-card h3 { display:flex; align-items:center; gap:0.6rem; }
+    .upwork-detail-card h3 i { color:#e2bf58; font-size:0.95rem; }
+    .upwork-detail-card ul { list-style:none; display:grid; gap:0.56rem; margin-top:0.65rem; }
+    .upwork-detail-card li { position:relative; padding-left:1.05rem; color:#c9c0ae; font-size:0.84rem; line-height:1.65; overflow-wrap:anywhere; }
+    .upwork-detail-card li::before { content:"✦"; position:absolute; left:0; top:0.03rem; color:#e2bf58; font-size:0.7rem; }
+    .upwork-skills { display:flex; flex-wrap:wrap; gap:0.48rem; margin-top:0.85rem; }
+    .upwork-skills span { padding:0.38rem 0.62rem; border:1px solid rgba(212,175,55,0.32); border-radius:999px; background:rgba(212,175,55,0.06); color:#e3d7b6; font-size:0.72rem; line-height:1.4; }
+    .upwork-cert-link { display:inline-flex; align-items:center; gap:0.45rem; margin-top:0.85rem; color:#e2bf58; font-size:0.78rem; font-weight:800; text-decoration:none; }
+    .upwork-cert-link:hover { color:#fff1bd; }
+    .upwork-profile-cta { display:inline-flex; align-items:center; justify-content:center; gap:0.6rem; margin:0.1rem 0 5rem; padding:0.82rem 1.2rem; border:1px solid rgba(212,175,55,0.82); border-radius:10px; background:linear-gradient(135deg,#f4d675 0%,#bd9228 100%); color:#11100b; text-decoration:none; text-align:center; font-size:0.85rem; font-weight:800; transition:filter 0.25s ease,transform 0.25s ease; }
+    .upwork-profile-cta:hover { filter:brightness(1.08); transform:translateY(-1px); }
+
     /* About */
     .about-detail {
       display: grid;
@@ -2685,6 +2702,72 @@
       </a>
     </section>
 
+    <!-- Upwork Professional Profile -->
+    <section id="upwork-profile">
+      <h2 class="section-title"><i class="fa-solid fa-briefcase"></i> <span data-en="Upwork Professional Profile" data-no="Profesjonell Upwork-profil">Upwork Professional Profile</span></h2>
+      <p class="section-intro">SEO & Guest Posting | Link Building | Manual Outreach Specialist. I help businesses research niche-relevant publisher opportunities and support link-building campaigns through personalized, manual outreach and competitor backlink research.</p>
+
+      <div class="upwork-snapshot-grid">
+        <article class="upwork-snapshot"><div class="upwork-snapshot-label">Hourly rate</div><div class="upwork-snapshot-value">$15.00 / hr</div></article>
+        <article class="upwork-snapshot"><div class="upwork-snapshot-label">Availability listed</div><div class="upwork-snapshot-value">30+ hrs / week</div></article>
+        <article class="upwork-snapshot"><div class="upwork-snapshot-label">Contract preference</div><div class="upwork-snapshot-value">Open to contract-to-hire</div></article>
+        <article class="upwork-snapshot"><div class="upwork-snapshot-label">Location listed</div><div class="upwork-snapshot-value">Basirpur, Pakistan</div></article>
+        <article class="upwork-snapshot"><div class="upwork-snapshot-label">Profile identity</div><div class="upwork-snapshot-value">Muhammad J. · Verified</div></article>
+        <article class="upwork-snapshot"><div class="upwork-snapshot-label">Profile indicators</div><div class="upwork-snapshot-value">ID verified · Veteran status listed</div></article>
+      </div>
+
+      <div class="services-grid">
+        <article class="service-card upwork-detail-card">
+          <h3><i class="fa-solid fa-link"></i> Core Services</h3>
+          <p>Support for off-page SEO campaigns, with a focus on relevant opportunities and clear campaign scope.</p>
+          <ul><li>Guest posting and guest-post outreach</li><li>High-DA/DR link insertion opportunities</li><li>Niche-relevant backlink building</li><li>Manual SEO outreach and publisher prospecting</li><li>Competitor backlink analysis and opportunity research</li></ul>
+        </article>
+        <article class="service-card upwork-detail-card">
+          <h3><i class="fa-solid fa-globe"></i> Target Industries</h3>
+          <p>Industry coverage listed in the Upwork profile includes:</p>
+          <ul><li>Technology and SaaS</li><li>Business and Finance</li><li>Health and Fitness</li><li>Home Improvement</li><li>Fashion and Beauty</li><li>Lifestyle and Travel</li></ul>
+        </article>
+        <article class="service-card upwork-detail-card">
+          <h3><i class="fa-solid fa-envelope-open-text"></i> Outreach Workflow</h3>
+          <p>Experience listed at Nextage Solutions includes researching prospects, matching sites to the campaign niche, reviewing domain metrics with SEMrush and SEOquake, and writing personalized email pitches.</p>
+          <ul><li>Prospect research and niche targeting</li><li>Publisher and website metric review</li><li>Personalized cold-email outreach</li><li>Competitor backlink opportunity research</li></ul>
+        </article>
+        <article class="service-card upwork-detail-card">
+          <h3><i class="fa-solid fa-language"></i> Languages</h3>
+          <ul><li><strong>Urdu:</strong> Native or bilingual</li><li><strong>Punjabi / Panjabi:</strong> Conversational</li><li><strong>English:</strong> Basic</li></ul>
+          <p style="margin-top:0.85rem;">Language levels are shown as provided in the Upwork profile details.</p>
+        </article>
+        <article class="service-card upwork-detail-card">
+          <h3><i class="fa-solid fa-briefcase"></i> Employment History</h3>
+          <p><strong>Nextage Solutions</strong></p>
+          <p><strong>Guest Blogging and SEO Intern | Link Building & Outreach Specialist</strong></p>
+          <p>July 2026 – Present</p>
+          <p style="margin-top:0.65rem;">Listed responsibilities: prospect research, niche targeting across Technology, SaaS, and Business, domain-metric checks using SEMrush and SEOquake, and personalized outreach email writing.</p>
+        </article>
+        <article class="service-card upwork-detail-card">
+          <h3><i class="fa-solid fa-graduation-cap"></i> Education</h3>
+          <ul><li>Government High School Rohela Tejeka — Arts</li><li>Board of Intermediate & Secondary Education, Lahore — Arts</li></ul>
+        </article>
+        <article class="service-card upwork-detail-card">
+          <h3><i class="fa-solid fa-award"></i> SEMrush Academy Certifications</h3>
+          <p><strong>Local SEO Essentials with SEMRUSH</strong><br>Issued September 2026 · Expires September 2027</p>
+          <a class="upwork-cert-link" href="https://static.semrush.com/academy/certificates/1843394581/muhammad-jalal-din_25.pdf" target="_blank" rel="noopener noreferrer">Open certificate PDF <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          <p style="margin-top:1.1rem;"><strong>Off-Page SEO and AI Search Essentials with SEMRUSH</strong><br>Issued September 2026 · Expires September 2027</p>
+          <a class="upwork-cert-link" href="https://static.semrush.com/academy/certificates/4f1d545f31/muhammad-jalal-din_25.pdf" target="_blank" rel="noopener noreferrer">Open certificate PDF <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          <p style="margin-top:1.1rem;"><strong>Keyword Research Essentials with SEMRUSH</strong><br>Issued September 2026 · Expires September 2027</p>
+          <a class="upwork-cert-link" href="https://static.semrush.com/academy/certificates/c3155321e7/muhammad-jalal-din_25.pdf" target="_blank" rel="noopener noreferrer">Open certificate PDF <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </article>
+        <article class="service-card upwork-detail-card">
+          <h3><i class="fa-solid fa-list-check"></i> Skills Listed on Upwork</h3>
+          <p>Skills below are reproduced from the supplied profile data.</p>
+          <div class="upwork-skills">
+            <span>Search Engine Optimization</span><span>Link Building</span><span>Guest Post</span><span>Digital Marketing</span><span>Lead Generation</span><span>Vendor & Supplier Outreach</span><span>SEO Backlinking</span><span>SEO Keyword Research</span><span>Off-Page SEO</span><span>Cold Email</span><span>Email Outreach</span><span>B2B Lead Generation</span><span>Competitor Backlink Analysis</span><span>Backlink Analysis</span><span>Content Marketing</span><span>On-Page SEO</span><span>Local SEO</span><span>Outreach Strategy</span><span>Outreach Email Copywriting</span><span>SEO Strategy</span>
+          </div>
+        </article>
+      </div>
+      <a class="upwork-profile-cta" href="https://upwork.com/freelancers/~mjalaldin" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> View My Upwork Profile</a>
+    </section>
+
     <!-- About Section -->
     <section id="about-me">
       <h2 class="section-title">
@@ -2811,7 +2894,7 @@
                 </button>
                 <button type="button" class="platform-page" data-platform="upwork" aria-controls="platform-detail" aria-pressed="false">
                   <span class="page-icon"><i class="fa-solid fa-briefcase"></i></span>
-                  <span><strong>Upwork</strong><small>Guest posting · Link building · Manual outreach</small></span>
+                  <span><strong>Upwork</strong><small>$15/hr · 30+ hrs/week · SEO outreach</small></span>
                 </button>
                 <button type="button" class="platform-page" data-platform="linkedin" aria-controls="platform-detail" aria-pressed="false">
                   <span class="page-icon"><i class="fa-brands fa-linkedin-in"></i></span>
@@ -2869,7 +2952,7 @@
       },
       upwork: {
         title: "Upwork — SEO, Guest Posting & Manual Outreach",
-        description: "Profile focus: guest posting, link building, 100% manual SEO outreach, niche-relevant backlink building, publisher prospecting, and competitor backlink analysis. Target sectors listed in your profile include Tech/SaaS, Business/Finance, Health/Fitness, Home Improvement, Fashion/Beauty, Lifestyle, and Travel. View Upwork for the current profile details and engagement terms.",
+        description: "Rate listed: $15/hr. Availability: 30+ hours per week; open to contract-to-hire. Services include guest posting, niche-relevant link building, manual outreach, publisher prospecting, and competitor backlink analysis. Languages listed: English (Basic), Urdu (Native/Bilingual), and Punjabi (Conversational). See the dedicated Upwork section for industries, skills, experience, education, and certifications.",
         url: "https://upwork.com/freelancers/~mjalaldin",
         label: "View Upwork Profile"
       },
